@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Service Desk | Barrister AKM Kamruzzaman</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&amp;family=Manrope:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#d7dbd7",
+                        "primary-container": "#006a4e",
+                        "surface-bright": "#f7faf6",
+                        "on-primary-fixed": "#002116",
+                        "on-surface": "#181d1a",
+                        "inverse-primary": "#83d7b4",
+                        "on-tertiary-fixed-variant": "#75322b",
+                        "on-background": "#181d1a",
+                        "on-error": "#ffffff",
+                        "secondary": "#7a5900",
+                        "inverse-surface": "#2d312f",
+                        "surface-container-low": "#f1f5f0",
+                        "on-primary-fixed-variant": "#00513b",
+                        "primary-fixed-dim": "#83d7b4",
+                        "surface-off-white": "#F9FBF9",
+                        "secondary-container": "#fdbc13",
+                        "institutional-blue": "#1A237E",
+                        "surface-container": "#ebefea",
+                        "inverse-on-surface": "#eef2ed",
+                        "on-secondary-container": "#6b4d00",
+                        "on-tertiary-container": "#ffcac3",
+                        "on-tertiary-fixed": "#3c0705",
+                        "background": "#f7faf6",
+                        "secondary-fixed": "#ffdea3",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#261900",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#fdbc13",
+                        "on-primary-container": "#92e7c3",
+                        "surface-tint": "#046c50",
+                        "tertiary": "#74302a",
+                        "surface-variant": "#e0e3df",
+                        "surface-container-highest": "#e0e3df",
+                        "tertiary-fixed-dim": "#ffb4aa",
+                        "surface-container-high": "#e5e9e5",
+                        "surface": "#f7faf6",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#5d4200",
+                        "on-tertiary": "#ffffff",
+                        "paddy-gold": "#D4AF37",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#9ef4d0",
+                        "tertiary-container": "#91473f",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#6f7a73",
+                        "outline-variant": "#bec9c2",
+                        "neutral-charcoal": "#2D2D2D",
+                        "tertiary-fixed": "#ffdad5",
+                        "primary": "#00503a",
+                        "on-surface-variant": "#3f4944"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "80px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-lg": ["Source Serif 4"],
+                        "body-md": ["Manrope"],
+                        "quote-xl": ["Source Serif 4"],
+                        "headline-lg-mobile": ["Source Serif 4"],
+                        "display-lg": ["Source Serif 4"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .service-card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -10px rgba(0, 80, 58, 0.15);
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation -->
+<header class="bg-surface-off-white dark:bg-inverse-surface sticky top-0 z-50 transition-all duration-300">
+<nav class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed">
+                AKM Kamruzzaman
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">About</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Dinajpur-5</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Media</a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded font-bold hover:bg-primary-container transition-all active:opacity-80">
+                    Service Desk
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative py-20 overflow-hidden bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-4 block">Modern Governance</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-6 leading-tight">Digital Service Desk &amp; Tracking</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-lg">
+                        Empowering the citizens of Dinajpur-5 through transparency and accountability. Every complaint, assistance application, and legal inquiry is tracked in real-time to ensure no voice goes unheard.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-primary text-on-primary px-8 py-3 rounded-lg font-bold shadow-lg hover:shadow-primary/20 transition-all flex items-center gap-2" href="#services">
+                            Access Services <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<div class="flex items-center gap-3 px-4 py-2 border border-outline-variant rounded-lg bg-surface-lowest">
+<span class="material-symbols-outlined text-primary" data-weight="fill">verified</span>
+<span class="text-label-sm font-medium">ISO Standard Processing</span>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all duration-700"></div>
+<img alt="Professional Barrister Workspace" class="relative rounded-xl shadow-2xl w-full h-[450px] object-cover" data-alt="A high-end, professional barrister's desk captured with cinematic low-depth-of-field. The scene features a heavy mahogany desk with leather-bound legal volumes, a modern tablet showing a digital dashboard, and a classic brass balance scale. Natural morning light streams through a large window, highlighting the crisp white stationery and a silver pen. The atmosphere is dignified, intellectual, and suggests a bridge between traditional law and modern technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5u3IdnGuWbCPrnv_1OSu196GXhrEE6e_RI9-aGRyQ5D9zz1OLQa0Ou4FARI27uAWGelXH-tOywfmmffIuls2H9TnB-ilouSusY7PMb4Ey-VA6y9vrAYwDODfTX6G7gg7tL-nU3-r7Wb11YQGP3Cj7QAt4aekSS5ZTBuncZKC3wW0azJYpIZgjGS7tmIFQjeEEeBTMo3px7lnAL7Xq_cuWxq8CLqV3pIuJYrJxbNJ-x97YN1ItMMlwlQWM0O31edX38ytJTsq3aoDq"/>
+</div>
+</div>
+</section>
+<!-- Tracking Section -->
+<section class="py-12 -mt-16 relative z-20">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="bg-surface-container-highest p-8 rounded-xl shadow-xl border border-outline-variant">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="max-w-md">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Track Your Application</h2>
+<p class="text-body-md text-on-surface-variant">Enter your unique 12-digit tracking code to see the current status of your request.</p>
+</div>
+<div class="flex-1 max-w-xl">
+<form class="flex gap-2">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-lg border-outline-variant focus:ring-primary focus:border-primary font-label-sm" placeholder="Ex: BKK-2024-XXXX" type="text"/>
+</div>
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-lg font-bold hover:bg-secondary-container transition-all" type="submit">
+                                    Track
+                                </button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Cards Grid -->
+<section class="py-section-gap" id="services">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-display-lg text-primary mb-4">Citizen Services</h2>
+<div class="w-24 h-1 bg-paddy-gold mx-auto mb-6"></div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                        Structured platforms designed to address your specific needs with professional legal oversight and administrative diligence.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Complaint Box -->
+<div class="service-card-hover group bg-white p-10 rounded-xl border border-outline-variant flex flex-col transition-all duration-300">
+<div class="font-label-sm text-primary mb-8 text-4xl opacity-20">01</div>
+<div class="bg-primary-container/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">rate_review</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-4">Complaint Box</h3>
+<p class="text-body-md text-on-surface-variant mb-8 flex-grow">
+                            Report issues regarding local infrastructure, safety, or administrative misconduct. Every complaint is assigned a tracking ID for follow-up.
+                        </p>
+<a class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all" href="#">
+                            Submit Complaint <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+<!-- Assistance Application -->
+<div class="service-card-hover group bg-white p-10 rounded-xl border border-outline-variant flex flex-col transition-all duration-300">
+<div class="font-label-sm text-primary mb-8 text-4xl opacity-20">02</div>
+<div class="bg-primary-container/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">volunteer_activism</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-4">Assistance Application</h3>
+<p class="text-body-md text-on-surface-variant mb-8 flex-grow">
+                            Request social, medical, or educational support. Our desk processes these with the utmost respect for privacy and urgency.
+                        </p>
+<a class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all" href="#">
+                            Apply for Help <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+<!-- Legal FAQ -->
+<div class="service-card-hover group bg-white p-10 rounded-xl border border-outline-variant flex flex-col transition-all duration-300">
+<div class="font-label-sm text-primary mb-8 text-4xl opacity-20">03</div>
+<div class="bg-primary-container/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">gavel</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-4">Legal FAQ</h3>
+<p class="text-body-md text-on-surface-variant mb-8 flex-grow">
+                            Inquire about citizen rights, land laws, or democratic procedures. Our legal team provides documented guidance for public interest questions.
+                        </p>
+<a class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all" href="#">
+                            Ask a Question <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Vision Divider -->
+<section class="bg-primary py-16 text-on-primary">
+<div class="max-w-container-max mx-auto px-gutter text-center">
+<div class="mb-6 flex justify-center opacity-30">
+<span class="material-symbols-outlined text-5xl">potted_plant</span>
+</div>
+<blockquote class="font-quote-xl text-quote-xl max-w-4xl mx-auto mb-4 italic">
+                    "Listening to the people's voice, documenting their struggles, and elevating local priorities to the national stage is the core duty of modern political leadership."
+                </blockquote>
+<p class="font-label-sm text-paddy-gold uppercase tracking-widest">— Barrister AKM Kamruzzaman</p>
+</div>
+</section>
+<!-- Feature Grid (Governance) -->
+<section class="py-section-gap bg-surface-off-white">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Modern Governance Framework</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-bold">01</div>
+<div>
+<h4 class="font-bold text-on-surface mb-2">Rule of Law</h4>
+<p class="text-on-surface-variant">Connecting local grievances with administrative archives and legal advocacy to ensure lasting solutions.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-bold">02</div>
+<div>
+<h4 class="font-bold text-on-surface mb-2">Public Connection</h4>
+<p class="text-on-surface-variant">Digital tracking ensures every voice from every union of Fulbari &amp; Parbatipur is heard and organized.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-bold">03</div>
+<div>
+<h4 class="font-bold text-on-surface mb-2">Resource Economy</h4>
+<p class="text-on-surface-variant">Prioritizing development in railway, mining, and agriculture based on direct citizen feedback data.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<img class="rounded-lg h-64 w-full object-cover shadow-lg" data-alt="A detailed close-up of a modern server room with glowing green and blue LED lights reflecting off brushed metal surfaces. The image conveys a sense of high-tech digital infrastructure and secure data management. The lighting is low-key with sharp, technical highlights, emphasizing a sophisticated and reliable technological backbone for digital services in a professional institutional setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOGlf6N9I8CJKC0YGkEixjTbXVhzh1CXuieTPXQscRtjb6eXVFBrNbcA9Y6GLmjhQC1rbQtPUE8QS16WPrAmUhG6YL86IET4PrUQ9NPOONa97Vg433faNfK3yG7afLycMpE_p09tU514vi1o1vuqI1R3NiBRyGYA3PG1yttzd0avU-2L7CeftbEvm9Ujg-jUqPO_WoeQ8Ls7otRO5Bcc0gag804ns7zf04XaByl5T6vzUhLo8dRq5ptThAD4dxIHueeaCeBxsXVCxA"/>
+<img class="rounded-lg h-64 w-full object-cover shadow-lg translate-y-8" data-alt="Two professionals in business attire shaking hands firmly in a bright, modern glass-walled office. The background shows a blurry cityscape with modern architecture. The lighting is high-key and natural, creating a mood of trust, partnership, and professional agreement. The color palette is dominated by soft grays, whites, and deep forest green accents, reflecting corporate integrity and democratic collaboration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMCtI-O5awIeZkYezeh-xKaQCnDyJ1W-QgQ-HakPGp9AXEanjiPpEsKOmG_6gFRfoSBj3mjeSOZcqqCRVxgBRt_kVoFa4GoE113_i_YgMbgqjdElwIKeF0Wht-zkb2WOWxNCR6a0N1Gn-5vcDJUvZsrS3_WKTGH2tZomy0yvPR3tYa2c__hSvwD-XzzZrustupIwqEnErWIapyLho1jnJtKg1yvwQ74dWf__bzLQuL1WObp0pw6wZq_yEIANTi7oCzkPWDM36UCrd5"/>
+<img class="rounded-lg h-64 w-full object-cover shadow-lg" data-alt="A clean, minimalist architectural detail of a modern government building featuring white stone columns and a large glass facade. The sky is a clear, brilliant blue. The composition is geometric and orderly, evoking themes of transparency, stability, and institutional strength. The lighting is bright and direct, casting soft, structured shadows that highlight the pristine building materials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhkR3DqUgq9Utvol0NDJT5vXSUKlVKL2v0ARFit5H137U1OxY4jT921Wdl1kMhHNJ9be7UXwr60Np51GA3H6HlfG6W5mPx0v3caeg1or3TGuzN1fEhYFUsRQ3B8qyKeTRe1gNnl4cLGZJx6edG7b6zRRWhB82ItXt3axPGs4pPHs74gi_XaItcgVRPNhTN1Y73vuUDGseQ2uMzs7P2CfTgB_FDHq176uZixPH_lQHPqKjXsQyHmYMXcpGYLYKeY_VpsqJl6Ni3xCGM"/>
+<img class="rounded-lg h-64 w-full object-cover shadow-lg translate-y-8" data-alt="A focused image of a professional signing a formal document with a high-quality fountain pen. The paper features official-looking seals and letterhead. The setting is a bright, airy office with minimalist decor. The focus is sharp on the hand and pen, with a shallow depth of field. The image suggests legal precision, accountability, and the formalization of citizen requests in an administrative process." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASjJzNmcaITw4Qi2AMRVdlaOPYy9Hp_MkHUuD3n840ysOoXYhIBlonxvfTRjLU1MpsZe3MXJ1oZcf7Fy_AXe7_1AfwN6e5mQHlJU0vRbJrFrqJewm34WbOOjl5Su7Sx1b4Fjhcf4B-wFd29npSGc2EP3CjlphWEKiZMhlaTTHMTd465GbNQL7RztdfIyyNyV6xCfJuA-OnXyN16tfcZAY7hAnbQPvXdX-rzgGHqdWHHHE6-grP0rBZ2QBMTAQxCxeqx2lbjDeFk9cM"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-dim border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter w-full px-gutter py-section-gap max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-headline-lg text-headline-lg text-primary font-bold">AKM Kamruzzaman</div>
+<p class="text-body-md text-on-surface-variant max-w-xs">
+                    A modern citizen platform bringing law, public service, and democratic commitment together for Dinajpur-5.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h4 class="font-bold text-on-surface mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:underline hover:text-primary transition-all" href="#">About Office</a></li>
+<li><a class="text-on-surface-variant hover:underline hover:text-primary transition-all" href="#">Dinajpur-5</a></li>
+<li><a class="text-on-surface-variant hover:underline hover:text-primary transition-all" href="#">Media Archive</a></li>
+<li><a class="text-on-surface-variant hover:underline hover:text-primary transition-all" href="#">Legal Disclaimer</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6">Service Desk</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:underline hover:text-primary transition-all" href="#">Complaint Box</a></li>
+<li><a class="text-on-surface-variant hover:underline hover:text-primary transition-all" href="#">Help Center</a></li>
+<li><a class="text-on-surface-variant hover:underline hover:text-primary transition-all" href="#">Legal FAQ</a></li>
+<li><a class="text-on-surface-variant hover:underline hover:text-primary transition-all" href="#">Track Application</a></li>
+</ul>
+</div>
+</div>
+<div class="bg-surface-off-white p-8 rounded-lg border border-outline-variant">
+<h4 class="font-bold text-on-surface mb-4">Constituency Office</h4>
+<div class="space-y-4 text-on-surface-variant">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span>Fulbari &amp; Parbatipur,<br/>Dinajpur-5, Bangladesh</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<span>+880 1XXX XXXXXX</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span>contact@kamruzzaman.org</span>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant py-8">
+<div class="max-w-container-max mx-auto px-gutter text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                    © 2024 Barrister AKM Kamruzzaman. All Rights Reserved. Authorized by the Dinajpur-5 Constituency Office.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        function toggleMobileMenu() {
+            // Implementation for a simple drawer could go here
+            console.log('Mobile menu toggled');
+        }
+
+        // Add a scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.remove('h-20');
+                header.classList.add('h-16');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('h-20');
+                header.classList.remove('h-16');
+            }
+        });
+    </script>
+</body></html>

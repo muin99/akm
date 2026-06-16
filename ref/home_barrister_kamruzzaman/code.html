@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="light" lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;family=Manrope:wght@200..800&amp;family=JetBrains+Mono:wght@100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .service-card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -10px rgba(0, 80, 58, 0.15);
+        }
+        .vision-divider {
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        }
+        @media (max-width: 768px) {
+            .mobile-hide { display: none; }
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#ebefea",
+                    "outline": "#6f7a73",
+                    "primary-container": "#006a4e",
+                    "on-tertiary-fixed-variant": "#75322b",
+                    "on-background": "#181d1a",
+                    "inverse-on-surface": "#eef2ed",
+                    "primary-fixed-dim": "#83d7b4",
+                    "tertiary": "#74302a",
+                    "on-primary-container": "#92e7c3",
+                    "surface-off-white": "#F9FBF9",
+                    "on-tertiary-fixed": "#3c0705",
+                    "on-primary-fixed-variant": "#00513b",
+                    "on-secondary-container": "#6b4d00",
+                    "surface-variant": "#e0e3df",
+                    "surface-dim": "#d7dbd7",
+                    "secondary-container": "#fdbc13",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed": "#002116",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f7faf6",
+                    "surface-container-highest": "#e0e3df",
+                    "tertiary-fixed": "#ffdad5",
+                    "primary": "#00503a",
+                    "on-primary": "#ffffff",
+                    "institutional-blue": "#1A237E",
+                    "inverse-surface": "#2d312f",
+                    "neutral-charcoal": "#2D2D2D",
+                    "secondary-fixed-dim": "#fdbc13",
+                    "outline-variant": "#bec9c2",
+                    "tertiary-fixed-dim": "#ffb4aa",
+                    "on-secondary-fixed": "#261900",
+                    "primary-fixed": "#9ef4d0",
+                    "secondary": "#7a5900",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#046c50",
+                    "tertiary-container": "#91473f",
+                    "on-surface": "#181d1a",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#ffdea3",
+                    "background": "#f7faf6",
+                    "error-container": "#ffdad6",
+                    "paddy-gold": "#D4AF37",
+                    "surface-container-low": "#f1f5f0",
+                    "surface": "#f7faf6",
+                    "inverse-primary": "#83d7b4",
+                    "on-tertiary-container": "#ffcac3",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#5d4200",
+                    "on-surface-variant": "#3f4944",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e5e9e5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "section-gap": "80px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "label-sm": ["JetBrains Mono"],
+                    "quote-xl": ["Source Serif 4"],
+                    "headline-lg": ["Source Serif 4"],
+                    "display-lg": ["Source Serif 4"],
+                    "body-md": ["Manrope"],
+                    "headline-lg-mobile": ["Source Serif 4"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "quote-xl": ["24px", {"lineHeight": "36px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface-off-white text-on-surface font-body-md overflow-x-hidden">
+<!-- Navigation Drawer (Sidebar Mobile) -->
+<div class="fixed inset-y-0 left-0 z-50 flex flex-col bg-surface dark:bg-surface-dim h-full w-80 rounded-r-xl shadow-xl transform -translate-x-full transition-transform duration-300" id="nav-drawer">
+<div class="p-gutter flex items-center justify-between">
+<h2 class="font-headline-lg text-headline-lg text-primary">Menu</h2>
+<button class="p-2" onclick="toggleDrawer()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col mt-4">
+<a class="bg-primary-container text-on-primary-container rounded-full mx-2 px-4 py-3 flex items-center gap-4 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-body-md">Home</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant mx-2 px-4 py-3 flex items-center gap-4 hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-body-md">About</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant mx-2 px-4 py-3 flex items-center gap-4 hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+<span class="font-body-md">Dinajpur-5</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant mx-2 px-4 py-3 flex items-center gap-4 hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="news">news</span>
+<span class="font-body-md">Media</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant mx-2 px-4 py-3 flex items-center gap-4 hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+<span class="font-body-md">Service Desk</span>
+</a>
+</nav>
+</div>
+<div class="fixed inset-0 bg-black/40 z-40 hidden" id="drawer-overlay" onclick="toggleDrawer()"></div>
+<!-- Top AppBar -->
+<header class="bg-surface-off-white dark:bg-surface-dim border-b border-outline-variant dark:border-outline sticky top-0 z-30 h-20">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-full">
+<div class="flex items-center gap-4">
+<button class="md:hidden p-2 text-primary" onclick="toggleDrawer()">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="account_balance">account_balance</span>
+<h1 class="font-headline-lg text-headline-lg font-semibold text-primary dark:text-primary-fixed-dim whitespace-nowrap">Barrister AKM Kamruzzaman</h1>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-paddy-gold pb-1 font-bold transition-all" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">About</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Dinajpur-5</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Media</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-sm text-label-sm uppercase tracking-wider hover:opacity-90 transition-all scale-95 active:opacity-80">
+                Service Desk
+            </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative bg-surface-bright overflow-hidden pt-12 md:pt-0">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 gap-gutter items-center min-h-[600px]">
+<div class="md:col-span-7 z-10 py-12">
+<div class="inline-block bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm mb-6">
+                        DINAJPUR-5 PARLIAMENTARY CONSTITUENCY
+                    </div>
+<h2 class="font-display-lg text-display-lg md:text-[56px] text-primary mb-6 leading-tight">
+                        ন্যায়বিচার, সেবা এবং <br/>
+<span class="text-secondary">দিনাজপুর-৫</span> এর উন্নয়ন।
+                    </h2>
+<p class="font-body-md text-on-surface-variant max-w-lg mb-8 text-lg">
+                        Justice, Service, and Development. A dedicated journey to uplift the lives of every citizen in Dinajpur-5 through transparency and administrative excellence.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold hover:shadow-lg transition-all flex items-center gap-2">
+<span>আমাদের লক্ষ্য</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border-2 border-primary text-primary px-8 py-4 rounded-xl font-bold hover:bg-primary/5 transition-all">
+                            পরিচিতি
+                        </button>
+</div>
+</div>
+<div class="md:col-span-5 relative h-full flex items-end justify-center">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl -z-10 transform scale-125 translate-y-20"></div>
+<img alt="Barrister AKM Kamruzzaman" class="w-full h-auto object-contain max-h-[80vh] drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida/ADBb0ugV9sBubFUFLjzpgDFKNHTBMSo7OnbWS-oKVauG3tTMprV2SovolWdvWiIeF1vanCPa90TjGrGUNRVfHfGjJRbHe_Cr-7lmsPjkIjNpo_T3xUyHttKu6faXgOlSXuuSnXwsL1SqKYpWTz_Np-kiFxNCoQpdjyocEI1lzD48J8Ubwmr9OkA5YHc2Or0PpSHbZXcPwXgFFrWQJXKozAlR5x2JXzr_BXExogHBzJHM2yqLcfFkPTqIym9lOhzk"/>
+</div>
+</div>
+</section>
+<!-- Featured Services (Action Grid) -->
+<section class="py-section-gap bg-surface-off-white">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">নাগরিক সেবা কেন্দ্র</h2>
+<p class="text-on-surface-variant font-body-md">Citizen-First digital services for immediate assistance and transparent governance.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="service-card-hover bg-white p-10 border border-outline-variant rounded-xl transition-all duration-300 group">
+<div class="text-secondary font-label-sm text-label-sm mb-6 block opacity-50">01</div>
+<div class="bg-primary-container/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl" data-icon="rate_review">rate_review</span>
+</div>
+<h3 class="font-headline-lg text-2xl text-primary mb-4">অভিযোগ দাখিল করুন</h3>
+<p class="text-on-surface-variant font-body-md mb-8">File a Complaint regarding any local issues or administrative irregularities.</p>
+<a class="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+<span>এখনই করুন</span>
+<span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+<!-- Card 2 -->
+<div class="service-card-hover bg-white p-10 border border-outline-variant rounded-xl transition-all duration-300 group">
+<div class="text-secondary font-label-sm text-label-sm mb-6 block opacity-50">02</div>
+<div class="bg-primary-container/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl" data-icon="volunteer_activism">volunteer_activism</span>
+</div>
+<h3 class="font-headline-lg text-2xl text-primary mb-4">সহায়তা চান</h3>
+<p class="text-on-surface-variant font-body-md mb-8">Seek Help for emergency situations or social welfare support applications.</p>
+<a class="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+<span>আবেদন করুন</span>
+<span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+<!-- Card 3 -->
+<div class="service-card-hover bg-white p-10 border border-outline-variant rounded-xl transition-all duration-300 group">
+<div class="text-secondary font-label-sm text-label-sm mb-6 block opacity-50">03</div>
+<div class="bg-primary-container/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl" data-icon="help_center">help_center</span>
+</div>
+<h3 class="font-headline-lg text-2xl text-primary mb-4">প্রশ্ন জিজ্ঞাসা করুন</h3>
+<p class="text-on-surface-variant font-body-md mb-8">Ask a Question regarding policies, ongoing projects, or legal matters.</p>
+<a class="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+<span>যোগাযোগ করুন</span>
+<span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Political Vision Section -->
+<section class="py-section-gap bg-surface-container-low relative overflow-hidden">
+<div class="absolute top-0 right-0 p-12 opacity-5">
+<span class="material-symbols-outlined text-[200px]" data-icon="account_balance">account_balance</span>
+</div>
+<div class="max-w-container-max mx-auto px-gutter text-center relative z-10">
+<div class="vision-divider mx-auto mb-10"></div>
+<blockquote class="font-quote-xl text-quote-xl md:text-[32px] text-neutral-charcoal leading-relaxed max-w-4xl mx-auto italic mb-10">
+                    "রাজনীতি হচ্ছে জনগণের সেবা করার একটি পবিত্র মাধ্যম। আমি দিনাজপুর-৫ এর প্রতিটি মানুষের কাছে সুশাসন এবং ন্যায়বিচার পৌঁছে দিতে প্রতিশ্রুতিবদ্ধ।"
+                </blockquote>
+<div class="flex flex-col items-center">
+<p class="font-headline-lg text-xl text-primary font-semibold">ব্যারিস্টার এ কে এম কামরুজ্জামান</p>
+<p class="font-label-sm text-label-sm text-secondary tracking-widest mt-2">DINAJPUR-5 VISIONARY LEADER</p>
+</div>
+</div>
+</section>
+<!-- Latest Updates (Bento Grid Style) -->
+<section class="py-section-gap bg-surface-off-white">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">সর্বশেষ সংবাদ ও কার্যক্রম</h2>
+<p class="text-on-surface-variant font-body-md mt-2">Stay updated with the latest events and development works in the constituency.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 border-b-2 border-primary pb-1">
+                        সকল সংবাদ দেখুন
+                        <span class="material-symbols-outlined">open_in_new</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="md:col-span-2 md:row-span-2 bg-white rounded-xl overflow-hidden border border-outline-variant flex flex-col">
+<div class="h-64 bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="A professional photograph of a legal library with dark wood bookshelves and rows of law books. Soft directional lighting from a window creates a dignified atmosphere. The scene is clean, institutional, and projects a sense of deep learning and authority with a calm morning light mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUHoJVwZl3useWXTl_OteQuteKP8rL-wD8CSddxY-b1rhMcaqvbA-qUwElA11on6lNC-lYA0Qo0uzJaDMRl9cZ4FCLRRlNhs3G0_NzTB8bTFM9-eCwmFG2C-QlZerNrkkobpPKssWiju-loIidApPWiDrIq2uimoi13UgnKZHdvdHZ1411LJ_tyZkm6ICby4gQIivkv3p9nefOVnOhZ-YKntqHfCVUozH4HwdV_5gwQ9FbKja5IO52OdOmQpp_jhqU-YYphGjGtmO-"/>
+<span class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded font-label-sm text-xs">FEATURED</span>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<span class="font-label-sm text-label-sm text-secondary mb-3">12 OCT 2024</span>
+<h3 class="font-headline-lg text-2xl text-primary mb-4">দিনাজপুর-৫ এর শিক্ষা অবকাঠামো উন্নয়নে নতুন পরিকল্পনা</h3>
+<p class="text-on-surface-variant line-clamp-3">A comprehensive masterplan for educational infrastructure development across the constituency was discussed in today's high-level meeting.</p>
+<div class="mt-auto pt-6">
+<a class="text-primary font-bold" href="#">বিস্তারিত পড়ুন</a>
+</div>
+</div>
+</div>
+<div class="md:col-span-2 bg-white rounded-xl p-6 border border-outline-variant flex gap-6 items-start">
+<div class="flex-shrink-0 bg-primary-container/10 text-primary p-4 rounded-lg flex flex-col items-center justify-center min-w-[70px]">
+<span class="font-headline-lg text-2xl">08</span>
+<span class="font-label-sm text-xs uppercase">OCT</span>
+</div>
+<div>
+<h4 class="font-headline-lg text-lg text-primary mb-2">ফুলবাড়ি এলাকায় ফ্রি মেডিকেল ক্যাম্প উদ্বোধন</h4>
+<p class="text-on-surface-variant text-sm line-clamp-2">Free medical services provided to over 500 residents during the one-day health camp organized by the Barrister's office.</p>
+</div>
+</div>
+<div class="md:col-span-2 bg-white rounded-xl p-6 border border-outline-variant flex gap-6 items-start">
+<div class="flex-shrink-0 bg-primary-container/10 text-primary p-4 rounded-lg flex flex-col items-center justify-center min-w-[70px]">
+<span class="font-headline-lg text-2xl">05</span>
+<span class="font-label-sm text-xs uppercase">OCT</span>
+</div>
+<div>
+<h4 class="font-headline-lg text-lg text-primary mb-2">কৃষকদের সহায়তায় সরকারি ভর্তুকি বিতরণ কর্মসূচী</h4>
+<p class="text-on-surface-variant text-sm line-clamp-2">Ensuring fair distribution of agricultural subsidies directly to the verified farmers of the region.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant dark:border-outline">
+<div class="w-full py-section-gap px-gutter flex flex-col md:flex-row justify-between items-start max-w-container-max mx-auto gap-12">
+<div class="max-w-xs">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="account_balance">account_balance</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">AKMK</h2>
+</div>
+<p class="text-on-surface-variant font-body-md mb-6">Dedicated to the people of Dinajpur-5. Committed to justice, integrity, and sustainable regional growth.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div>
+<h4 class="font-label-sm text-label-sm text-primary uppercase mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Home</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">About</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Media</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm text-primary uppercase mb-6">Citizen Actions</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Help Desk</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">File Complaint</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h4 class="font-label-sm text-label-sm text-primary uppercase mb-6">Contact</h4>
+<p class="text-on-surface-variant font-body-md">Dinajpur Office: Ghoraghat, Dinajpur-5, Bangladesh.</p>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-8 border-t border-outline/10 text-center md:text-left">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Barrister AKM Kamruzzaman. All Rights Reserved.</p>
+</div>
+</footer>
+<!-- FAB for quick action -->
+<button class="fixed bottom-8 right-8 bg-secondary-container text-on-secondary-container w-16 h-16 rounded-full shadow-2xl flex items-center justify-center z-40 hover:scale-105 active:scale-95 transition-transform group">
+<span class="material-symbols-outlined text-3xl group-hover:rotate-12 transition-transform" data-icon="support_agent">support_agent</span>
+</button>
+<script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('nav-drawer');
+            const overlay = document.getElementById('drawer-overlay');
+            const isOpen = drawer.classList.contains('translate-x-0');
+            
+            if (isOpen) {
+                drawer.classList.remove('translate-x-0');
+                drawer.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+            } else {
+                drawer.classList.remove('-translate-x-full');
+                drawer.classList.add('translate-x-0');
+                overlay.classList.remove('hidden');
+            }
+        }
+    </script>
+</body></html>

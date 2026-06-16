@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="light" lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#ebefea",
+                        "outline": "#6f7a73",
+                        "primary-container": "#006a4e",
+                        "on-tertiary-fixed-variant": "#75322b",
+                        "on-background": "#181d1a",
+                        "inverse-on-surface": "#eef2ed",
+                        "primary-fixed-dim": "#83d7b4",
+                        "tertiary": "#74302a",
+                        "on-primary-container": "#92e7c3",
+                        "surface-off-white": "#F9FBF9",
+                        "on-tertiary-fixed": "#3c0705",
+                        "on-primary-fixed-variant": "#00513b",
+                        "on-secondary-container": "#6b4d00",
+                        "surface-variant": "#e0e3df",
+                        "surface-dim": "#d7dbd7",
+                        "secondary-container": "#fdbc13",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#002116",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f7faf6",
+                        "surface-container-highest": "#e0e3df",
+                        "tertiary-fixed": "#ffdad5",
+                        "primary": "#00503a",
+                        "on-primary": "#ffffff",
+                        "institutional-blue": "#1A237E",
+                        "inverse-surface": "#2d312f",
+                        "neutral-charcoal": "#2D2D2D",
+                        "secondary-fixed-dim": "#fdbc13",
+                        "outline-variant": "#bec9c2",
+                        "tertiary-fixed-dim": "#ffb4aa",
+                        "on-secondary-fixed": "#261900",
+                        "primary-fixed": "#9ef4d0",
+                        "secondary": "#7a5900",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#046c50",
+                        "tertiary-container": "#91473f",
+                        "on-surface": "#181d1a",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#ffdea3",
+                        "background": "#f7faf6",
+                        "error-container": "#ffdad6",
+                        "paddy-gold": "#D4AF37",
+                        "surface-container-low": "#f1f5f0",
+                        "surface": "#f7faf6",
+                        "inverse-primary": "#83d7b4",
+                        "on-tertiary-container": "#ffcac3",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#5d4200",
+                        "on-surface-variant": "#3f4944",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e5e9e5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "section-gap": "80px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["JetBrains Mono"],
+                        "quote-xl": ["Source Serif 4"],
+                        "headline-lg": ["Source Serif 4"],
+                        "display-lg": ["Source Serif 4"],
+                        "body-md": ["Manrope"],
+                        "headline-lg-mobile": ["Source Serif 4"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-surface-off-white dark:bg-surface-dim border-b border-outline-variant dark:border-outline docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="account_balance">account_balance</span>
+<h1 class="font-headline-lg text-headline-lg font-semibold text-primary dark:text-primary-fixed-dim">Barrister AKM Kamruzzaman</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">About</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Dinajpur-5</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Media</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-paddy-gold pb-1 font-bold" href="#">Service Desk</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-all active:scale-95">
+                Login
+            </button>
+</div>
+</header>
+<main class="min-h-screen">
+<!-- Hero / Section Intro -->
+<section class="bg-surface-container-low py-16 px-gutter">
+<div class="max-w-container-max mx-auto text-center">
+<h2 class="font-display-lg text-display-lg text-primary mb-4">সেবা কেন্দ্র (Service Desk)</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                    জনগণের সেবায় আমাদের অঙ্গীকার। ডিজিটাল ট্র্যাকিং এবং জবাবদিহিতার মাধ্যমে আপনার প্রতিটি সমস্যার সমাধান নিশ্চিত করাই আমাদের লক্ষ্য।
+                </p>
+<div class="mt-8 flex justify-center gap-4">
+<span class="bg-primary-container text-on-primary-container px-4 py-1 rounded-full font-label-sm text-label-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+                        Digital Tracking Active
+                    </span>
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-label-sm text-label-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="gavel">gavel</span>
+                        Legal Accountability
+                    </span>
+</div>
+</div>
+</section>
+<!-- Service Action Grid -->
+<section class="py-section-gap px-gutter">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Complaint Box -->
+<div class="group bg-surface-container-lowest border border-outline-variant p-8 rounded-xl hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="font-label-sm text-6xl text-primary">01</span>
+</div>
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined" data-icon="report_problem">report_problem</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4">অভিযোগ বক্স (Complaint Box)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                            আপনার এলাকার যেকোনো সমস্যা বা অভিযোগ সরাসরি আমাদের জানান। প্রতিটি অভিযোগের একটি ট্র্যাকিং নম্বর প্রদান করা হবে।
+                        </p>
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 transition-all" onclick="toggleForm('complaint-form')">
+                            অভিযোগ দাখিল করুন
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Assistance Request -->
+<div class="group bg-surface-container-lowest border border-outline-variant p-8 rounded-xl hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="font-label-sm text-6xl text-primary">02</span>
+</div>
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4">সহায়তার আবেদন (Assistance)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                            সামাজিক, অর্থনৈতিক বা বিশেষ কোনো সহযোগিতার প্রয়োজন হলে এখানে আবেদন করুন। আমরা আপনার পাশে আছি।
+                        </p>
+<button class="w-full border-2 border-paddy-gold text-primary py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-surface-container-low active:scale-95 transition-all" onclick="toggleForm('assistance-form')">
+                            আবেদন করুন
+                            <span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+</button>
+</div>
+<!-- Legal FAQ -->
+<div class="group bg-surface-container-lowest border border-outline-variant p-8 rounded-xl hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="font-label-sm text-6xl text-primary">03</span>
+</div>
+<div class="w-12 h-12 bg-institutional-blue text-white rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined" data-icon="balance">balance</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4">আইনি জিজ্ঞাসা (Legal FAQ)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                            সাধারণ আইনি পরামর্শ এবং সচরাচর জিজ্ঞাসিত প্রশ্নের উত্তর পান এখানে। সরাসরি প্রশ্ন করার সুযোগ রয়েছে।
+                        </p>
+<a class="w-full bg-neutral-charcoal text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 transition-all" href="#faq-section">
+                            জিজ্ঞাসা দেখুন
+                            <span class="material-symbols-outlined" data-icon="search">search</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Tracking Status Area -->
+<section class="py-12 bg-surface-bright border-y border-outline-variant">
+<div class="max-w-4xl mx-auto px-gutter text-center">
+<h4 class="font-headline-lg text-headline-lg text-primary mb-6">আপনার আবেদনের অবস্থা জানুন</h4>
+<div class="flex flex-col md:flex-row gap-4">
+<input class="flex-grow bg-white border border-outline-variant px-6 py-4 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none font-label-sm text-label-sm" placeholder="ট্র্যাকিং আইডি লিখুন (যেমন: AKM-2024-XXXX)" type="text"/>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-bold hover:opacity-90 transition-all">ট্র্যাক করুন</button>
+</div>
+<div class="mt-6 flex justify-center gap-8 text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-2"><span class="w-3 h-3 bg-secondary rounded-full"></span> পেন্ডিং</div>
+<div class="flex items-center gap-2"><span class="w-3 h-3 bg-institutional-blue rounded-full"></span> প্রক্রিয়াধীন</div>
+<div class="flex items-center gap-2"><span class="w-3 h-3 bg-primary rounded-full"></span> সম্পন্ন</div>
+</div>
+</div>
+</section>
+<!-- Form Modal Overlay (Simplified for Demo) -->
+<div class="hidden fixed inset-0 bg-neutral-charcoal/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4" id="form-container">
+<div class="bg-white w-full max-w-2xl rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-300">
+<div class="bg-primary p-6 flex justify-between items-center text-white">
+<h3 class="font-headline-lg text-headline-lg" id="form-title">অভিযোগ দাখিল</h3>
+<button class="material-symbols-outlined hover:bg-white/20 p-2 rounded-full" onclick="toggleForm()">close</button>
+</div>
+<form class="p-8 space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-outline">পূর্ণ নাম</label>
+<input class="w-full border-b-2 border-outline-variant focus:border-primary outline-none py-2 transition-colors" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-outline">মোবাইল নম্বর</label>
+<input class="w-full border-b-2 border-outline-variant focus:border-primary outline-none py-2 transition-colors" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-outline">বিস্তারিত বিবরণ</label>
+<textarea class="w-full border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-primary outline-none" rows="4"></textarea>
+</div>
+<div class="flex items-center gap-4 bg-surface-container p-4 rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="info">info</span>
+<p class="font-body-md text-xs text-on-surface-variant">আপনার তথ্য সম্পূর্ণ নিরাপদ। অভিযোগ দাখিলের পর একটি ট্র্যাকিং এসএমএস পাবেন।</p>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-bold shadow-lg shadow-primary/20 hover:opacity-90 active:scale-[0.98] transition-all" type="submit">সাবমিট করুন</button>
+</form>
+</div>
+</div>
+<!-- Document-inspired Accountability Text -->
+<section class="py-section-gap px-gutter bg-white">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A professional legal desk setting with a balance scale of justice, a wooden gavel, and high-end stationery. The lighting is soft and corporate, creating a sense of authority and trust. The atmosphere is quiet, dignified, and service-oriented, emphasizing transparency and institutional integrity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVU1cmL7SBrsNd-AHw1x5XazoVgZ_yHgqCLSdbO_Gz7S6EMWCEsiT4avaLgJiXmsqzrG42dklo9eRazqXa83p40Gv0vU2LlfFGnL8vOxK4zPTWt2mcCqKvO3ZU8IRSi1KpbEa7aSfzZkcah7fSDt4DieiDy1HYtNEQnzFHDd1iP7np-omxI-ZsswqtgdVGAyIFqw48kqUdxPq_zb94_z414IXl3M6Dv4WfTLfF81Md2ozpQvczElK8fDpDD72c3Ex78bGl2ptUB3gA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">স্বচ্ছতা ও জবাবদিহিতা (Accountability)</h2>
+<div class="space-y-4">
+<blockquote class="font-quote-xl text-quote-xl italic text-on-surface border-l-4 border-paddy-gold pl-6 py-2">
+                            "একটি ডিজিটাল সিস্টেম কেবল গতির জন্য নয়, এটি জনগণের প্রতি আমাদের দায়বদ্ধতার একটি প্রতিফলন।"
+                        </blockquote>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            ব্যারিস্টার এ কে এম কামরুজ্জামানের নেতৃত্বে আমরা একটি আধুনিক ‘সার্ভিস ডেস্ক’ গড়ে তুলেছি যা প্রতিটি নাগরিকের কণ্ঠস্বরকে প্রাধান্য দেয়। আমাদের সিস্টেমে প্রতিটি অভিযোগ এবং আবেদনের জন্য একটি ইউনিক ট্র্যাকিং আইডি প্রদান করা হয়, যা দুর্নীতি রোধে এবং কাজের গতি বৃদ্ধিতে সহায়ক।
+                        </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant dark:border-outline">
+<div class="w-full py-section-gap px-gutter flex flex-col md:flex-row justify-between items-start max-w-container-max mx-auto">
+<div class="mb-8 md:mb-0 max-w-sm">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Barrister AKM Kamruzzaman</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">ন্যায়বিচার ও নাগরিক সেবায় সদা জাগ্রত। দিনাজপুর-৫ আসনের মানুষের অধিকার রক্ষায় আমাদের পথচলা।</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-3">
+<h4 class="font-label-sm text-label-sm font-bold text-primary">Quick Links</h4>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">About</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Media</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-sm text-label-sm font-bold text-primary">Citizen Services</h4>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Help Desk</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">File Complaint</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-sm text-label-sm font-bold text-primary">Contact</h4>
+<p class="text-on-surface-variant dark:text-surface-variant font-medium">Dinajpur, Bangladesh</p>
+<div class="flex gap-4 mt-2">
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="facebook">social_leaderboard</span>
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="mail">mail</span>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full border-t border-outline-variant py-6 px-gutter text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Barrister AKM Kamruzzaman. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+        function toggleForm(type) {
+            const container = document.getElementById('form-container');
+            const title = document.getElementById('form-title');
+            
+            if (container.classList.contains('hidden')) {
+                if (type === 'complaint-form') {
+                    title.innerText = 'অভিযোগ দাখিল (Complaint)';
+                } else if (type === 'assistance-form') {
+                    title.innerText = 'সহায়তার আবেদন (Assistance)';
+                }
+                container.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            } else {
+                container.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close on escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') toggleForm();
+        });
+    </script>
+</body></html>

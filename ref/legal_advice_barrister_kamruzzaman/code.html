@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html class="light" lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Source+Serif+4:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#3c0705",
+                    "on-surface-variant": "#3f4944",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#91473f",
+                    "on-secondary-fixed": "#261900",
+                    "outline": "#6f7a73",
+                    "paddy-gold": "#D4AF37",
+                    "institutional-blue": "#1A237E",
+                    "primary-fixed": "#9ef4d0",
+                    "neutral-charcoal": "#2D2D2D",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#ebefea",
+                    "primary-container": "#006a4e",
+                    "on-secondary-fixed-variant": "#5d4200",
+                    "surface": "#f7faf6",
+                    "inverse-primary": "#83d7b4",
+                    "surface-off-white": "#F9FBF9",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#fdbc13",
+                    "inverse-on-surface": "#eef2ed",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f1f5f0",
+                    "tertiary": "#74302a",
+                    "tertiary-fixed": "#ffdad5",
+                    "inverse-surface": "#2d312f",
+                    "on-surface": "#181d1a",
+                    "tertiary-fixed-dim": "#ffb4aa",
+                    "surface-tint": "#046c50",
+                    "on-error-container": "#93000a",
+                    "on-background": "#181d1a",
+                    "primary": "#00503a",
+                    "on-tertiary-fixed-variant": "#75322b",
+                    "on-secondary": "#ffffff",
+                    "background": "#f7faf6",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#f7faf6",
+                    "primary-fixed-dim": "#83d7b4",
+                    "surface-container-high": "#e5e9e5",
+                    "outline-variant": "#bec9c2",
+                    "on-primary-fixed": "#002116",
+                    "surface-container-highest": "#e0e3df",
+                    "surface-dim": "#d7dbd7",
+                    "secondary-fixed-dim": "#fdbc13",
+                    "on-primary-container": "#92e7c3",
+                    "surface-variant": "#e0e3df",
+                    "secondary": "#7a5900",
+                    "on-secondary-container": "#6b4d00",
+                    "secondary-fixed": "#ffdea3",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#ffcac3",
+                    "on-primary-fixed-variant": "#00513b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "container-max": "1200px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "section-gap": "80px"
+            },
+            "fontFamily": {
+                    "body-md": ["Manrope"],
+                    "label-sm": ["JetBrains Mono"],
+                    "headline-lg-mobile": ["Source Serif 4"],
+                    "headline-lg": ["Source Serif 4"],
+                    "display-lg": ["Source Serif 4"],
+                    "quote-xl": ["Source Serif 4"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "quote-xl": ["24px", {"lineHeight": "36px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab {
+            border-bottom: 2px solid #D4AF37;
+            font-weight: 700;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(0, 80, 58, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-off-white text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar Navigation -->
+<header class="fixed top-0 z-50 w-full bg-surface-off-white border-b border-outline-variant">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="account_balance">account_balance</span>
+<span class="text-headline-lg font-headline-lg font-bold text-primary">Barrister AKM Kamruzzaman</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="text-primary border-b-2 border-paddy-gold pb-1 font-bold" href="#">Legal Advice</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Media Archive</a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded shadow-sm hover:opacity-90 transition-all font-semibold">Contact</button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section: Resource Entry -->
+<section class="relative h-[530px] flex items-center bg-primary overflow-hidden">
+<div class="absolute inset-0 opacity-20">
+<img alt="Legal Library" class="w-full h-full object-cover" data-alt="A majestic, high-ceilinged law library filled with ancient leather-bound books on dark wood shelves. The lighting is dramatic and moody, with soft golden rays of sunlight filtering through large arched windows, illuminating dust motes in the air. The aesthetic is institutional and professional, using a rich palette of deep greens and mahogany browns, conveying a sense of historical authority and quiet study." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWPX0h8wntSGBYEUDeqGEnGQEcmO559xayX2PlukKnoRBCRg846MyrH1HI6si-DeJLultQ_2AqPgTyIrdSZ5CuGmRKZTQDPKtmtZKeXcf7R03lz4wPSciDxGKhn8jLlbizbNZV_Nt-pD0HG1ZJoFnb7x9qWKCkrfXZZnd3AUuHyxbzkIspC26cKO10k1QDh4QvyGRhHtp0B-ao3vgwK0UUzIU3fkFibcH4DUAPn5XLBQ2h1mTnMm5SIesTH5oHnamw1r4jGCqJQLQL"/>
+</div>
+<div class="relative max-w-container-max mx-auto px-margin-mobile md:px-gutter w-full text-white">
+<div class="max-w-2xl">
+<span class="font-label-sm text-paddy-gold tracking-widest block mb-4 uppercase">আইনি সহায়তা কেন্দ্র</span>
+<h1 class="text-display-lg font-display-lg leading-tight mb-6">আপনার অধিকার জানুন, আইনের শাসন সমুন্নত রাখুন।</h1>
+<p class="text-quote-xl font-quote-xl opacity-90 mb-8">নাগরিক হিসেবে মৌলিক অধিকার, ভূমি আইন এবং গণতান্ত্রিক চর্চার বিষয়ে সঠিক আইনি তথ্যের মাধ্যমে নিজেকে ক্ষমতায়িত করুন।</p>
+<div class="flex gap-4">
+<a class="bg-paddy-gold text-neutral-charcoal px-8 py-4 rounded-lg font-bold hover:scale-105 transition-transform flex items-center gap-2" href="#know-your-rights">
+                            শুরু করুন <span class="material-symbols-outlined">arrow_downward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Know Your Rights -->
+<section class="py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto" id="know-your-rights">
+<div class="mb-12 text-center">
+<h2 class="text-headline-lg font-headline-lg text-primary mb-4">আপনার অধিকার জানুন</h2>
+<div class="h-1 w-24 bg-paddy-gold mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
+<!-- Item 1: Constitutional Rights (Large) -->
+<div class="md:col-span-8 glass-card rounded-xl p-8 relative overflow-hidden group">
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-paddy-gold mb-2 block">অধ্যায় ০১</span>
+<h3 class="text-headline-lg font-headline-lg text-primary mb-4">মৌলিক মানবাধিকার</h3>
+<p class="text-body-md text-on-surface-variant max-w-md">সংবিধান প্রদত্ত বাক-স্বাধীনতা, ধর্মীয় স্বাধীনতা এবং ন্যায়বিচার পাওয়ার অধিকার সম্পর্কে বিস্তারিত জানুন। প্রতিটি নাগরিকের জন্য এই জ্ঞান অপরিহার্য।</p>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold hover:underline">
+                            আরও পড়ুন <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<span class="material-symbols-outlined absolute -bottom-10 -right-10 text-[200px] text-primary opacity-5 group-hover:scale-110 transition-transform" data-icon="gavel">gavel</span>
+</div>
+<!-- Item 2: Land Law (Small) -->
+<div class="md:col-span-4 bg-institutional-blue rounded-xl p-8 text-white flex flex-col justify-between hover:shadow-xl transition-shadow">
+<span class="material-symbols-outlined text-4xl text-paddy-gold" data-icon="landscape">landscape</span>
+<div>
+<h3 class="text-xl font-bold mb-2">ভূমি আইন ও উত্তরাধিকার</h3>
+<p class="text-sm opacity-80">জমি ক্রয়-বিক্রয় এবং সম্পত্তির উত্তরাধিকার বন্টনের আইনি প্রক্রিয়া সম্পর্কে স্পষ্ট ধারণা নিন।</p>
+</div>
+</div>
+<!-- Item 3: Civil Laws (Small) -->
+<div class="md:col-span-4 border border-outline-variant rounded-xl p-8 flex flex-col justify-between hover:bg-surface-container-low transition-colors">
+<div>
+<h3 class="text-xl font-bold text-primary mb-2">পারিবারিক আইন</h3>
+<p class="text-sm text-on-surface-variant">বিবাহ, বিবাহবিচ্ছেদ এবং সন্তানদের অভিভাবকত্ব সংক্রান্ত আইনি পরামর্শ।</p>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-neutral-charcoal">৫টি গাইড</span>
+<span class="material-symbols-outlined text-primary" data-icon="family_restroom">family_restroom</span>
+</div>
+</div>
+<!-- Item 4: Democratic Rights (Large) -->
+<div class="md:col-span-8 glass-card rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center border-l-8 border-paddy-gold">
+<div class="w-full md:w-1/3 h-full rounded-lg overflow-hidden">
+<img alt="Justice" class="w-full h-full object-cover" data-alt="A close-up of a bronze Lady Justice statue holding the scales and a sword, set against a blurred background of a prestigious legal office. The lighting is soft and professional, highlighting the metallic texture of the statue. The color palette features warm golds, deep greens, and professional grays, symbolizing balance, integrity, and the weight of the law in a modern democratic society." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4RuIMICvFvLPhG-rdqL0pKRBEJ1WTH_JBBTld8aMX5JfjSjkwQ186X8XkYqiu8DDBdhDm7bzhR_sk2xL04mFJVKLpEaJ8oZ-1wa5ghN2AZx0apH7wdIwxRZ-MdlgQ7_qtpgz05wt5qI6zqdAaY7O182aklvnNaW9gpZ5RH4sZz2yISOkcwr4Lt2uBp5T0rMR8m7NAKIuZBriyugp0rirAvMyhj4_pvC6fD8dfcxWjgcKH7S_PZPiaSXSIoDjGabdXO0gjJttnQVvH"/>
+</div>
+<div class="flex-1">
+<h3 class="text-headline-lg font-headline-lg text-primary mb-4">গণতান্ত্রিক অধিকার ও ভোট</h3>
+<p class="text-body-md text-on-surface-variant mb-6">একজন ভোটার হিসেবে আপনার দায়িত্ব এবং নির্বাচনী প্রক্রিয়ায় অংশগ্রহণের গুরুত্ব সম্পর্কে জানুন। গণতন্ত্র রক্ষায় আপনার সচেতনতাই প্রধান শক্তি।</p>
+<button class="bg-primary text-white px-6 py-3 rounded hover:bg-opacity-90 transition-all font-semibold">সম্পূর্ণ নির্দেশিকা দেখুন</button>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex flex-col md:flex-row gap-gutter">
+<div class="md:w-1/3">
+<h2 class="text-headline-lg font-headline-lg text-primary mb-6">সাধারণ জিজ্ঞাসা (FAQ)</h2>
+<p class="text-body-md text-on-surface-variant">আইনি বিষয়ে সচরাচর জিজ্ঞাসিত কিছু প্রশ্নের উত্তর এখানে দেওয়া হলো। আপনার প্রশ্নের উত্তর না পেলে আমাদের সাথে যোগাযোগ করুন।</p>
+<div class="mt-8 p-6 bg-white rounded-lg shadow-sm border border-outline-variant">
+<h4 class="font-bold text-primary mb-2">আইনি সহায়তা প্রয়োজন?</h4>
+<p class="text-sm mb-4">আমরা আপনাকে সঠিক পথ নির্দেশ করতে প্রস্তুত।</p>
+<a class="text-paddy-gold font-bold flex items-center gap-1 hover:underline" href="#">
+                                হেল্প ডেস্ক <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+<div class="md:w-2/3 space-y-4">
+<!-- FAQ Item 1 -->
+<div class="bg-white rounded-lg border border-outline-variant overflow-hidden">
+<button class="w-full text-left p-6 flex justify-between items-center hover:bg-surface-container transition-colors" onclick="toggleFaq(this)">
+<span class="font-bold text-on-background">জমির নামজারি (Mutation) কেন প্রয়োজন?</span>
+<span class="material-symbols-outlined transition-transform">expand_more</span>
+</button>
+<div class="hidden p-6 pt-0 text-on-surface-variant border-t border-outline-variant">
+                                জমির মালিকানা নিশ্চিত করতে এবং সরকারি রেকর্ডে নিজের নাম অন্তর্ভুক্ত করতে নামজারি অত্যন্ত জরুরি। এটি ছাড়া জমি বিক্রয় বা হস্তান্তর করা জটিল হতে পারে।
+                            </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="bg-white rounded-lg border border-outline-variant overflow-hidden">
+<button class="w-full text-left p-6 flex justify-between items-center hover:bg-surface-container transition-colors" onclick="toggleFaq(this)">
+<span class="font-bold text-on-background">জিডি (GD) করার আইনি গুরুত্ব কী?</span>
+<span class="material-symbols-outlined transition-transform">expand_more</span>
+</button>
+<div class="hidden p-6 pt-0 text-on-surface-variant border-t border-outline-variant">
+                                কোনো মূল্যবান বস্তু হারানো বা ভবিষ্যতে কোনো ক্ষতির আশঙ্কা থাকলে থানায় জিডি করা একটি প্রাথমিক আইনি পদক্ষেপ যা প্রামাণিক দলিল হিসেবে কাজ করে।
+                            </div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="bg-white rounded-lg border border-outline-variant overflow-hidden">
+<button class="w-full text-left p-6 flex justify-between items-center hover:bg-surface-container transition-colors" onclick="toggleFaq(this)">
+<span class="font-bold text-on-background">আইনি সহায়তার জন্য সরকারি খরচ কত?</span>
+<span class="material-symbols-outlined transition-transform">expand_more</span>
+</button>
+<div class="hidden p-6 pt-0 text-on-surface-variant border-t border-outline-variant">
+                                দরিদ্র ও অসচ্ছল নাগরিকদের জন্য সরকারি 'লিগ্যাল এইড' অফিসের মাধ্যমে বিনামূল্যে আইনি সহায়তা পাওয়ার সুযোগ রয়েছে।
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA: Request a Consultation -->
+<section class="py-section-gap px-margin-mobile md:px-gutter">
+<div class="max-w-container-max mx-auto bg-neutral-charcoal rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+<div class="md:w-1/2 p-12 md:p-20 text-white flex flex-col justify-center">
+<h2 class="text-headline-lg font-headline-lg mb-6">পরামর্শের জন্য অনুরোধ করুন</h2>
+<p class="text-body-md opacity-80 mb-8 leading-relaxed">
+                        আপনার যদি কোনো জটিল আইনি সমস্যা থাকে এবং বিশেষজ্ঞ পরামর্শের প্রয়োজন হয়, তবে নিচের ফরমটি পূরণ করুন। ব্যারিস্টার এ কে এম কামরুজ্জামানের অফিস থেকে আপনার সাথে যোগাযোগ করা হবে।
+                    </p>
+<div class="flex items-center gap-6">
+<div class="flex -space-x-4">
+<img alt="User 1" class="w-12 h-12 rounded-full border-2 border-neutral-charcoal" data-alt="A professional headshot of a middle-aged South Asian man wearing a formal blazer, looking confident and helpful. The background is a clean, bright legal office setting. Style is high-end corporate photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdKuyaqWrxYB0iC5dfTp9okfnXnfTgazgGWRoiJ4VCn9qj3NTu0LaQTcu_DmhYevyhFRL8Eb6iVeAEbE8hp9JsGtwcKcuqnEkmu9S1ijxDZ06iob3RvIz6xQ_t-bKpz0y3BHsmIu82UpbBuesel4VN-UKhcDOcGFZvy9zvYElFD5BqxwgHAq9lOz1Q0Q8h4SSh1BZxFgSSq1aoIInee5e3o6PI9M5gYNJVXVXtjbayB_xJz0XKg7OakeQEVuUz1HdG6penaOJvlven"/>
+<img alt="User 2" class="w-12 h-12 rounded-full border-2 border-neutral-charcoal" data-alt="A professional headshot of a young South Asian woman in a smart business suit, smiling warmly towards the camera. The setting is a modern boardroom with soft lighting. Style is bright, professional, and accessible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlnL0kba4weVTj7TvXZuF3M-8ReN0dCIkJEOREGDsLDxMpmvwkxd5Rw2rqN6k93_YFyF-VnIDpDOrqMrVNByNa-jvVkAUCI5TA1z4jC9JcnJj7RmlZLUAB0Obmls0Wy5nz6iCBadWGJkUAScfBddDV2scGoSoV9Xm8pG1iT_LcC_zl0jy9gGXwxItBjukC1tuETqTCBEoW_3gnHPjiFONVUD3hHEkB9B61VZIAUI6ybBUsVnlc4XuX6WU_3Dtn7HJ8aagjZJVwdGym"/>
+</div>
+<span class="text-sm font-label-sm text-paddy-gold">প্রতিদিন শত শত মানুষ সেবা নিচ্ছেন</span>
+</div>
+</div>
+<div class="md:w-1/2 bg-white p-12 md:p-20">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-bold text-primary mb-2">নাম</label>
+<input class="w-full border border-outline-variant rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="আপনার পূর্ণ নাম" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-bold text-primary mb-2">ফোন নম্বর</label>
+<input class="w-full border border-outline-variant rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="০১৮XXXXXXXX" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-bold text-primary mb-2">বিষয়</label>
+<select class="w-full border border-outline-variant rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+<option>ভূমি সমস্যা</option>
+<option>পারিবারিক আইন</option>
+<option>ফৌজদারি মামলা</option>
+<option>অন্যান্য</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-bold text-primary mb-2">আপনার বার্তা</label>
+<textarea class="w-full border border-outline-variant rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="সংক্ষেপে আপনার সমস্যার বিবরণ লিখুন" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-white py-4 rounded font-bold shadow-lg hover:scale-[0.98] transition-transform" type="submit">পরামর্শের আবেদন পাঠান</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-charcoal border-t-4 border-paddy-gold py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-3 gap-gutter items-start">
+<div class="space-y-6">
+<span class="text-headline-lg font-headline-lg text-surface-off-white font-semibold block">Barrister AKM Kamruzzaman</span>
+<p class="text-body-md text-surface-variant">বিরামপুর, দিনাজপুর-৬ আসনের জনগণের সেবায় এবং ন্যায়বিচার প্রতিষ্ঠায় আমরা প্রতিশ্রুতিবদ্ধ।</p>
+<div class="flex gap-4">
+<a class="text-surface-variant hover:text-paddy-gold transition-colors" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-surface-variant hover:text-paddy-gold transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-surface-variant hover:text-paddy-gold transition-colors" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8 md:col-span-2">
+<div>
+<h4 class="text-paddy-gold font-bold mb-6">গুরুত্বপূর্ণ লিঙ্ক</h4>
+<ul class="space-y-4">
+<li><a class="text-surface-variant hover:text-surface-off-white hover:underline decoration-paddy-gold decoration-2 underline-offset-4 transition-all" href="#">Home</a></li>
+<li><a class="text-surface-variant hover:text-surface-off-white hover:underline decoration-paddy-gold decoration-2 underline-offset-4 transition-all" href="#">About</a></li>
+<li><a class="text-paddy-gold font-bold" href="#">Legal Advice</a></li>
+<li><a class="text-surface-variant hover:text-surface-off-white hover:underline decoration-paddy-gold decoration-2 underline-offset-4 transition-all" href="#">Media Archive</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-paddy-gold font-bold mb-6">সেবা কেন্দ্র</h4>
+<ul class="space-y-4">
+<li><a class="text-surface-variant hover:text-surface-off-white hover:underline decoration-paddy-gold decoration-2 underline-offset-4 transition-all" href="#">Service Desk</a></li>
+<li><a class="text-surface-variant hover:text-surface-off-white hover:underline decoration-paddy-gold decoration-2 underline-offset-4 transition-all" href="#">Dinajpur-5</a></li>
+<li><a class="text-surface-variant hover:text-surface-off-white hover:underline decoration-paddy-gold decoration-2 underline-offset-4 transition-all" href="#">Complaints</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mt-16 pt-8 border-t border-white/10 text-center">
+<p class="text-label-sm font-label-sm text-surface-variant">© 2024 Barrister AKM Kamruzzaman. Committed to Justice &amp; Service.</p>
+</div>
+</footer>
+<script>
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.material-symbols-outlined');
+            
+            const isOpen = !content.classList.contains('hidden');
+            
+            // Close all others (optional accordion behavior)
+            document.querySelectorAll('.bg-white.rounded-lg.border > div').forEach(div => div.classList.add('hidden'));
+            document.querySelectorAll('.material-symbols-outlined').forEach(i => i.style.transform = 'rotate(0deg)');
+
+            if (!isOpen) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Simple animation on scroll for bento grid
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('#know-your-rights > div > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

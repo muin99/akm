@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Source+Serif+4:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#3c0705",
+                    "on-surface-variant": "#3f4944",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#91473f",
+                    "on-secondary-fixed": "#261900",
+                    "outline": "#6f7a73",
+                    "paddy-gold": "#D4AF37",
+                    "institutional-blue": "#1A237E",
+                    "primary-fixed": "#9ef4d0",
+                    "neutral-charcoal": "#2D2D2D",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#ebefea",
+                    "primary-container": "#006a4e",
+                    "on-secondary-fixed-variant": "#5d4200",
+                    "surface": "#f7faf6",
+                    "inverse-primary": "#83d7b4",
+                    "surface-off-white": "#F9FBF9",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#fdbc13",
+                    "inverse-on-surface": "#eef2ed",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f1f5f0",
+                    "tertiary": "#74302a",
+                    "tertiary-fixed": "#ffdad5",
+                    "inverse-surface": "#2d312f",
+                    "on-surface": "#181d1a",
+                    "tertiary-fixed-dim": "#ffb4aa",
+                    "surface-tint": "#046c50",
+                    "on-error-container": "#93000a",
+                    "on-background": "#181d1a",
+                    "primary": "#00503a",
+                    "on-tertiary-fixed-variant": "#75322b",
+                    "on-secondary": "#ffffff",
+                    "background": "#f7faf6",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#f7faf6",
+                    "primary-fixed-dim": "#83d7b4",
+                    "surface-container-high": "#e5e9e5",
+                    "outline-variant": "#bec9c2",
+                    "on-primary-fixed": "#002116",
+                    "surface-container-highest": "#e0e3df",
+                    "surface-dim": "#d7dbd7",
+                    "secondary-fixed-dim": "#fdbc13",
+                    "on-primary-container": "#92e7c3",
+                    "surface-variant": "#e0e3df",
+                    "secondary": "#7a5900",
+                    "on-secondary-container": "#6b4d00",
+                    "secondary-fixed": "#ffdea3",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#ffcac3",
+                    "on-primary-fixed-variant": "#00513b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "container-max": "1200px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "section-gap": "80px"
+            },
+            "fontFamily": {
+                    "body-md": ["Manrope"],
+                    "label-sm": ["JetBrains Mono"],
+                    "headline-lg": ["Source Serif 4"],
+                    "display-lg": ["Source Serif 4"],
+                    "quote-xl": ["Source Serif 4"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "quote-xl": ["24px", {"lineHeight": "36px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body { background-color: #f7faf6; }
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 80, 58, 0.85), rgba(0, 80, 58, 0.85)), url('https://lh3.googleusercontent.com/aida/ADBb0uj9FMVBXPV6p2Qj0D0VTf-f8ySPsVlP0B6A7l7PGudrthA8fVAFviCoRjrPfZAlMMuvCidcB4fLY7WuCapdnH6QkNz_nRvoHnGIununP9hxRCFEEBPFsbwHhT8RAa1-Q51d9JwRhjvTeWgBSpkcZ5gMlN4UJwUQxjDVHJe66SO9MguO6t4HT3gOiG9DrtgaVoQGwHykTrs32Rk2p43BIuN1ZH2aW-BHPZTKEvK6SGKZ4oZeetZfFdMA5O5S');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest dark:bg-surface-dim fixed top-0 w-full z-50 border-b border-outline-variant dark:border-outline">
+<div class="flex justify-between items-center px-gutter max-w-container-max mx-auto h-20">
+<div class="text-headline-lg font-headline-lg text-institutional-blue dark:text-inverse-primary">
+                Barrister Kamruzzaman
+            </div>
+<nav class="hidden md:flex items-center gap-8 font-body-md text-body-md">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Media</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Service Desk</a>
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-paddy-gold pb-1" href="#">Dinajpur-5</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Legal Advice</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2 font-bold transition-opacity active:opacity-80">
+                Contact Us
+            </button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="hero-gradient h-[500px] flex items-center relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter w-full relative z-10 text-on-primary">
+<div class="max-w-3xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-paddy-gold mb-4 block">নির্বাচনী এলাকা</span>
+<h1 class="font-display-lg text-display-lg mb-6 leading-tight">দিনাজপুর-৫: সমৃদ্ধির পথে ফুলবাড়ী ও পার্বতীপুর</h1>
+<p class="font-body-md text-body-md text-white/90 max-w-xl mb-8">
+                        দিনাজপুর-৫ আসনের জনগণের আর্থ-সামাজিক উন্নয়নের লক্ষ্যে ব্যারিস্টার এ কে এম কামরুজ্জামানের রূপকল্প ও কর্মপরিকল্পনা।
+                    </p>
+<div class="flex gap-4">
+<button class="bg-paddy-gold text-neutral-charcoal px-8 py-3 font-bold hover:bg-white transition-colors">ভিশন ২০২৪</button>
+<button class="border border-white text-white px-8 py-3 font-bold hover:bg-white/10 transition-colors">বিস্তারিত জানুন</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Development Agenda: Bento Grid Layout -->
+<section class="py-section-gap max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">উন্নয়ন এজেন্ডা</h2>
+<div class="w-24 h-1 bg-paddy-gold mx-auto"></div>
+</div>
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Large Feature: Education -->
+<div class="col-span-12 md:col-span-7 bg-white p-10 border border-outline-variant relative overflow-hidden group">
+<div class="relative z-10">
+<span class="text-paddy-gold font-label-sm text-label-sm mb-4 block">০১</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">শিক্ষার আধুনিকায়ন</h3>
+<p class="text-on-surface-variant mb-6">ফুলবাড়ী ও পার্বতীপুরের প্রতিটি ইউনিয়নে আধুনিক প্রযুক্তি সম্পন্ন ডিজিটাল ল্যাব এবং কারিগরি শিক্ষা কেন্দ্র স্থাপন করা হবে যাতে আমাদের তরুণ প্রজন্ম বিশ্ববাজারের জন্য প্রস্তুত হতে পারে।</p>
+<a class="text-primary font-bold inline-flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                            আরও পড়ুন <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="absolute -bottom-10 -right-10 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+</div>
+<!-- Medium Feature: Healthcare -->
+<div class="col-span-12 md:col-span-5 bg-primary text-on-primary p-10 border border-primary relative">
+<span class="text-paddy-gold font-label-sm text-label-sm mb-4 block">০২</span>
+<h3 class="font-headline-lg text-headline-lg mb-4 text-white">স্বাস্থ্যসেবা নিশ্চিতকরণ</h3>
+<p class="text-on-primary-container mb-6">উপজেলা স্বাস্থ্য কমপ্লেক্সগুলোকে আধুনিক যন্ত্রপাতি ও বিশেষজ্ঞ চিকিৎসকদের সমন্বয়ে শক্তিশালী করা হবে। প্রতিটি ওয়ার্ডে মোবাইল হেলথ ক্লিনিক চালু করা আমাদের অন্যতম লক্ষ্য।</p>
+<span class="material-symbols-outlined text-6xl text-paddy-gold/20 absolute bottom-6 right-6">health_and_safety</span>
+</div>
+<!-- Small Feature: Infrastructure -->
+<div class="col-span-12 md:col-span-4 bg-surface-container-high p-8 border border-outline-variant">
+<span class="text-primary font-label-sm text-label-sm mb-4 block">০৩</span>
+<h3 class="font-body-md text-[20px] font-bold mb-3">যোগাযোগ অবকাঠামো</h3>
+<p class="text-on-surface-variant text-sm">গ্রামীণ রাস্তাঘাটের উন্নয়ন এবং পার্বতীপুর রেল জংশনকে কেন্দ্র করে একটি আধুনিক লজিস্টিক হাব নির্মাণের পরিকল্পনা রয়েছে।</p>
+</div>
+<!-- Small Feature: Digitization -->
+<div class="col-span-12 md:col-span-4 bg-white p-8 border border-outline-variant">
+<span class="text-primary font-label-sm text-label-sm mb-4 block">০৪</span>
+<h3 class="font-body-md text-[20px] font-bold mb-3">স্মার্ট সিটিজেন সার্ভিস</h3>
+<p class="text-on-surface-variant text-sm">পৌরসভা ও ইউনিয়ন পরিষদের সকল সেবা ডিজিটাল প্ল্যাটফর্মে আনা হবে যাতে সাধারণ মানুষ ঘরে বসেই সেবা পায়।</p>
+</div>
+<!-- Small Feature: Clean Energy -->
+<div class="col-span-12 md:col-span-4 bg-institutional-blue text-white p-8">
+<span class="text-paddy-gold font-label-sm text-label-sm mb-4 block">০৫</span>
+<h3 class="font-body-md text-[20px] font-bold mb-3 text-white">পরিবেশ ও জ্বালানি</h3>
+<p class="text-white/70 text-sm">কয়লা খনি এলাকার পরিবেশ রক্ষা এবং কৃষিকাজে সৌরশক্তির ব্যবহার বৃদ্ধির মাধ্যমে টেকসই উন্নয়ন নিশ্চিত করা হবে।</p>
+</div>
+</div>
+</section>
+<!-- Economic Potential Section -->
+<section class="bg-surface-container py-section-gap border-y border-outline-variant">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">অর্থনৈতিক সম্ভাবনা</h2>
+<p class="text-on-surface-variant">আমাদের ভূগর্ভস্থ সম্পদ, উর্বর মাটি এবং কৌশলগত রেল সংযোগই হবে আগামীর দিনাজপুর-৫ এর অর্থনীতির মূল শক্তি।</p>
+</div>
+<div class="hidden md:block">
+<button class="border-2 border-primary text-primary px-6 py-2 font-bold hover:bg-primary hover:text-white transition-all">গবেষণা পত্র দেখুন</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Coal (Barapukuria) -->
+<div class="bg-white border border-outline-variant group hover:shadow-lg transition-all">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A detailed wide shot of a major industrial coal mining facility in Bangladesh during sunrise. The scene features heavy machinery, conveyors, and mining towers silhouetted against a warm orange sky. The professional corporate photography style uses low-contrast shadows and clean industrial lines, reflecting the economic stability and growth of the Dinajpur region with a dignified and institutional atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsM7Y09z6u_QuG2q-DcUZeUKsJ1xYOgUDV1NEu2jgSBpt_ncAv0G1gthSBGzas-gXx33rbvgPFz6UFQJjP_EKofqXJvq90AgTCVfkLiSl0r7x_DPI2kCpxtbniy5OJeYfnWYK4_DbFA7kcgIX5b2RiahzIjn-ImOlLWRwJ5YClqqw_1Sp8i5HIxkq17_NpOL8unrW2KuMHHNsdIkfNW1U85XUMq6qj4NedUlSD_0DYUpTDRGb38zJq4_6k1W7ft0mBNnSqtsh5nI-K"/>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+<h4 class="font-bold text-xl">কয়লা ও শিল্প</h4>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">বড়পুকুরিয়া কয়লা খনিকে কেন্দ্র করে পরিবেশবান্ধব শিল্পাঞ্চল গড়ে তোলা হবে, যা স্থানীয় হাজারও মানুষের কর্মসংস্থান সৃষ্টি করবে।</p>
+</div>
+</div>
+<!-- Railway (Parbatipur) -->
+<div class="bg-white border border-outline-variant group hover:shadow-lg transition-all">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A cinematic long-exposure photograph of a bustling historic railway junction in Bangladesh during the golden hour. Gleaming steel tracks converge in a complex patterns, representing connectivity and progress. The style is professional and administrative, with a palette of deep institutional blues and golden sunlight, conveying a sense of heritage and strategic economic importance in Parbatipur." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIriWvj40CMmzAQ71-IDjoykgX3Jq3nAzTfPGdlDnhsAtxYqH8gotqjYcwQpcdI8enxrGBU2LsNHopyC65TqZfQUOqQoq6VvlchAbsSy0XEIqty1Y7w07a8g8DrTjRb_14vpAuihliKnJk0fREOyIuf6yaqf_i2YD4b8R0i4vOG_GldVQpcUOpawOx5DlEAV8yt9l9BHtRVOGoK341D9K3FQlUMqNUkbkMyigBGaEw6iqSG8SSkddOSXrvo9HYPKIxLhv1cEFdFe6T"/>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">train</span>
+<h4 class="font-bold text-xl">রেলওয়ে লজিস্টিক</h4>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">পার্বতীপুর রেল জংশনকে ব্যবহার করে উত্তরবঙ্গের একটি প্রধান বাণিজ্য কেন্দ্র ও ইনল্যান্ড কন্টেইনার ডিপো নির্মাণের পরিকল্পনা।</p>
+</div>
+</div>
+<!-- Agriculture -->
+<div class="bg-white border border-outline-variant group hover:shadow-lg transition-all">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An expansive, lush green paddy field in rural Dinajpur under a clear bright sky. The sunlight illuminates the vibrant green crops, reflecting the agricultural prosperity of the region. The visual style is high-end corporate agrarian photography, emphasizing hope, abundance, and the 'paddy gold' aesthetic of the design system. The composition is clean and structured, with a deep focus on the horizon." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsKVULHHqu6HX_1udwv2v7vCgFUA7AJAVdr6OCwaTxdLCNS0Rtm9YeaQd_j8SJdBmxNaUA3_sl9VkBCg1gkJJel7kozigGQBCvkFWJWtEQx8kFRt_A5tc1cA9cHQWD1klJjDnGt7dQsc6ieb23T7oKGtG2_nboUFeCWudat_o5Z3D1SOwhhcsDTWd8CbWD_8Xf0gybEYGSq4fLRLpPr0aHGSQLnsnOyyUKNVjlzl6Uos2ZYpe8SBxHiWCHUZjwXWAti-2d2IPkKDaI"/>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">agriculture</span>
+<h4 class="font-bold text-xl">কৃষি ও এগ্রো-প্রসেসিং</h4>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">ধান ও লিচুর বাণিজ্যিকীকরণের জন্য কোল্ড স্টোরেজ এবং প্রসেসিং সেন্টার স্থাপন করে কৃষকের ন্যায্য মূল্য নিশ্চিত করা হবে।</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Vision Quote -->
+<section class="py-section-gap bg-surface-off-white relative">
+<div class="max-w-3xl mx-auto text-center px-gutter">
+<div class="mb-8 flex justify-center">
+<span class="material-symbols-outlined text-paddy-gold text-5xl">format_quote</span>
+</div>
+<blockquote class="font-quote-xl text-quote-xl text-primary leading-relaxed mb-8">
+                    "দিনাজপুর-৫ আসন কেবল একটি ভৌগোলিক অঞ্চল নয়, এটি আমাদের ঐতিহ্যের কেন্দ্রবিন্দু। আমার লক্ষ্য হল আইন পেশার সততা এবং জনসেবার একাগ্রতা দিয়ে ফুলবাড়ী ও পার্বতীপুরকে একটি মডেল স্মার্ট কনস্টিটিউয়েন্সিতে রূপান্তর করা।"
+                </blockquote>
+<div class="flex items-center justify-center gap-4 mb-2">
+<div class="w-12 h-[1px] bg-paddy-gold"></div>
+<cite class="font-bold text-lg not-italic">ব্যারিস্টার এ কে এম কামরুজ্জামান</cite>
+<div class="w-12 h-[1px] bg-paddy-gold"></div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">সংসদ সদস্য পদপ্রার্থী, দিনাজপুর-৫</p>
+</div>
+</section>
+<!-- Voice of the People: Grid Layout -->
+<section class="py-section-gap max-w-container-max mx-auto px-gutter">
+<div class="flex justify-between items-center mb-12">
+<h2 class="font-headline-lg text-headline-lg text-primary">জনগণের কণ্ঠস্বর</h2>
+<div class="flex gap-2">
+<button class="p-2 border border-outline-variant hover:bg-primary hover:text-white transition-colors" id="prevBtn"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="p-2 border border-outline-variant hover:bg-primary hover:text-white transition-colors" id="nextBtn"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="bg-white p-8 border-l-4 border-paddy-gold shadow-sm">
+<p class="font-body-md text-on-surface mb-6">"ব্যারিস্টার কামরুজ্জামান সাহেব যখন আমাদের এলাকায় এসে আমাদের অভাব-অভিযোগের কথা শোনেন, তখন মনে হয় সত্যিকারের একজন অভিভাবক পেয়েছি। তার আইনি দক্ষতা আমাদের বিচার পাওয়ার ক্ষেত্রেও অনেক সাহস যোগায়।"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+<div>
+<h5 class="font-bold">মোঃ আব্দুর রহিম</h5>
+<p class="text-xs text-on-surface-variant">কৃষক, পার্বতীপুর</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white p-8 border-l-4 border-paddy-gold shadow-sm">
+<p class="font-body-md text-on-surface mb-6">"তরুণ প্রজন্মের জন্য কর্মসংস্থান এবং ডিজিটাল শিক্ষার বিষয়ে উনার যে পরিকল্পনা, তা সত্যিই প্রশংসনীয়। আমরা চাই একজন শিক্ষিত এবং যোগ্য নেতা আমাদের এলাকার প্রতিনিধিত্ব করুক।"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+<div>
+<h5 class="font-bold">সায়মা পারভীন</h5>
+<p class="text-xs text-on-surface-variant">বিশ্ববিদ্যালয় শিক্ষার্থী, ফুলবাড়ী</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="bg-neutral-charcoal py-20">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 items-center gap-12">
+<div class="md:col-span-5 text-white">
+<h2 class="font-headline-lg text-headline-lg text-paddy-gold mb-6">ভৌগোলিক গুরুত্ব</h2>
+<p class="mb-8 text-white/80">দিনাজপুর-৫ আসনটি ফুলবাড়ী ও পার্বতীপুর উপজেলা নিয়ে গঠিত। এটি উত্তরবঙ্গের রেল যোগাযোগ এবং জাতীয় জ্বালানি নিরাপত্তার প্রধান কেন্দ্র। আমাদের প্রতিটি ইউনিয়নের উন্নয়নই হচ্ছে আমাদের মূল লক্ষ্য।</p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-paddy-gold">location_on</span>
+<span>পার্বতীপুর উপজেলা: ১০টি ইউনিয়ন</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-paddy-gold">location_on</span>
+<span>ফুলবাড়ী উপজেলা: ৭টি ইউনিয়ন</span>
+</li>
+</ul>
+</div>
+<div class="md:col-span-7 bg-white/10 aspect-video relative overflow-hidden group">
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-white/30 font-label-sm text-label-sm uppercase tracking-[1rem]">Map View</span>
+</div>
+<!-- Mock Map Background -->
+<div class="w-full h-full bg-surface-dim opacity-20 transition-opacity group-hover:opacity-30"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined text-paddy-gold text-6xl animate-bounce">location_on</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-charcoal dark:bg-surface-container-lowest w-full py-section-gap border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="font-headline-lg text-headline-lg text-paddy-gold mb-2">Barrister AKM Kamruzzaman</div>
+<p class="text-surface-variant font-label-sm text-label-sm max-w-sm">© 2024 Barrister AKM Kamruzzaman. Dedicated to Justice &amp; Public Service.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-label-sm text-label-sm">
+<a class="text-surface-variant hover:text-paddy-gold transition-colors" href="#">Privacy Policy</a>
+<a class="text-surface-variant hover:text-paddy-gold transition-colors" href="#">Terms of Service</a>
+<a class="text-surface-variant hover:text-paddy-gold transition-colors" href="#">Disclaimer</a>
+<a class="text-surface-variant hover:text-paddy-gold transition-colors" href="#">Staff Login</a>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between text-surface-variant font-label-sm">
+<div class="flex gap-4">
+<a class="hover:text-paddy-gold transition-colors" href="#">Facebook</a>
+<a class="hover:text-paddy-gold transition-colors" href="#">Twitter</a>
+<a class="hover:text-paddy-gold transition-colors" href="#">LinkedIn</a>
+</div>
+<p>Designed for Public Service Excellence</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for smooth scrolling and hover effects
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple testimonial transition effect
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        let currentTestimonial = 0;
+
+        document.getElementById('nextBtn')?.addEventListener('click', () => {
+            // Animation logic could go here
+            console.log('Next testimonial');
+        });
+
+        document.getElementById('prevBtn')?.addEventListener('click', () => {
+            // Animation logic could go here
+            console.log('Previous testimonial');
+        });
+    </script>
+</body></html>

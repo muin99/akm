@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Source+Serif+4:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#3c0705",
+                    "on-surface-variant": "#3f4944",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#91473f",
+                    "on-secondary-fixed": "#261900",
+                    "outline": "#6f7a73",
+                    "paddy-gold": "#D4AF37",
+                    "institutional-blue": "#1A237E",
+                    "primary-fixed": "#9ef4d0",
+                    "neutral-charcoal": "#2D2D2D",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#ebefea",
+                    "primary-container": "#006a4e",
+                    "on-secondary-fixed-variant": "#5d4200",
+                    "surface": "#f7faf6",
+                    "inverse-primary": "#83d7b4",
+                    "surface-off-white": "#F9FBF9",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#fdbc13",
+                    "inverse-on-surface": "#eef2ed",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f1f5f0",
+                    "tertiary": "#74302a",
+                    "tertiary-fixed": "#ffdad5",
+                    "inverse-surface": "#2d312f",
+                    "on-surface": "#181d1a",
+                    "tertiary-fixed-dim": "#ffb4aa",
+                    "surface-tint": "#046c50",
+                    "on-error-container": "#93000a",
+                    "on-background": "#181d1a",
+                    "primary": "#00503a",
+                    "on-tertiary-fixed-variant": "#75322b",
+                    "on-secondary": "#ffffff",
+                    "background": "#f7faf6",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#f7faf6",
+                    "primary-fixed-dim": "#83d7b4",
+                    "surface-container-high": "#e5e9e5",
+                    "outline-variant": "#bec9c2",
+                    "on-primary-fixed": "#002116",
+                    "surface-container-highest": "#e0e3df",
+                    "surface-dim": "#d7dbd7",
+                    "secondary-fixed-dim": "#fdbc13",
+                    "on-primary-container": "#92e7c3",
+                    "surface-variant": "#e0e3df",
+                    "secondary": "#7a5900",
+                    "on-secondary-container": "#6b4d00",
+                    "secondary-fixed": "#ffdea3",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#ffcac3",
+                    "on-primary-fixed-variant": "#00513b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "container-max": "1200px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "section-gap": "80px"
+            },
+            "fontFamily": {
+                    "body-md": ["Manrope"],
+                    "label-sm": ["JetBrains Mono"],
+                    "headline-lg": ["Source Serif 4"],
+                    "display-lg": ["Source Serif 4"],
+                    "quote-xl": ["Source Serif 4"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .paddy-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        }
+    </style>
+</head>
+<body class="bg-surface-off-white text-on-surface font-body-md">
+<!-- TopAppBar -->
+<nav class="sticky top-0 z-50 border-b border-outline-variant bg-surface-off-white">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="account_balance">account_balance</span>
+<span class="text-headline-lg font-headline-lg font-bold text-primary">Barrister AKM Kamruzzaman</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="text-primary border-b-2 border-paddy-gold pb-1 font-bold" href="#">Dinajpur-5</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Service Desk</a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-bold hover:bg-primary-container transition-all scale-98 active:opacity-80">Contact</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative bg-neutral-charcoal py-24 overflow-hidden">
+<div class="absolute inset-0 opacity-20" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPozvTa4EoDqmtwjgoZd5GIlb6ZmuxfDBupHuacqvi8k0G4kbC3ZyS2TphT9GDArCfbPTC5i4By_4IqdltIk3Hmgu5p1-NUpTOSXaSx50EKOPQ1jvWvYK84M60vp6ocSZ95ixhcUBJYihEUlJU7y_n52pMu_dGVnmq37W2a6VR6Ojbx5pQTi76PMXbKS_6UrvzbXCv22RLmf6FxM_Ks3F9gkWpZZG36olZXoANwB_MJ9QJzsrIW6VNT0uCp68i4obed3yQ0DerpzuN')"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter relative z-10 text-center">
+<span class="text-paddy-gold font-label-sm uppercase tracking-widest mb-4 block">নির্বাচনী এলাকা</span>
+<h1 class="text-white font-display-lg text-5xl md:text-6xl mb-6">দিনাজপুর-৫ (ফুলবাড়ী ও পার্বতীপুর)</h1>
+<p class="text-surface-variant max-w-2xl mx-auto text-body-md">একটি আধুনিক, সমৃদ্ধ এবং ডিজিটাল সেবাবান্ধব নির্বাচনী এলাকা গড়ার অঙ্গীকার।</p>
+</div>
+</header>
+<!-- Vision Section -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-primary text-4xl mb-4">উন্নয়নের রূপকল্প</h2>
+<div class="paddy-divider w-24 mx-auto mb-8"></div>
+<div class="font-quote-xl text-primary max-w-4xl mx-auto italic">
+                    "ফুলবাড়ী ও পার্বতীপুরের প্রতিটি নাগরিকের জন্য সুবিচার, অর্থনৈতিক সমৃদ্ধি এবং উন্নত জীবনযাত্রা নিশ্চিত করাই আমার মূল লক্ষ্য।"
+                </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Action Cards -->
+<div class="bg-white p-8 border border-outline-variant hover:border-paddy-gold transition-colors group">
+<span class="font-label-sm text-paddy-gold text-2xl block mb-4">০১</span>
+<h3 class="font-headline-lg text-primary text-xl mb-4">কৃষি বিপ্লব</h3>
+<p class="text-on-surface-variant text-body-md">আধুনিক সেচ ব্যবস্থা এবং কৃষকদের জন্য সরাসরি বাজার সংযোগ নিশ্চিতকরণ।</p>
+</div>
+<div class="bg-white p-8 border border-outline-variant hover:border-paddy-gold transition-colors group">
+<span class="font-label-sm text-paddy-gold text-2xl block mb-4">০২</span>
+<h3 class="font-headline-lg text-primary text-xl mb-4">অবকাঠামো উন্নয়ন</h3>
+<p class="text-on-surface-variant text-body-md">ফুলবাড়ী ও পার্বতীপুরের গ্রামীণ রাস্তাঘাট সংস্কার ও উন্নত যোগাযোগ ব্যবস্থা।</p>
+</div>
+<div class="bg-white p-8 border border-outline-variant hover:border-paddy-gold transition-colors group">
+<span class="font-label-sm text-paddy-gold text-2xl block mb-4">০৩</span>
+<h3 class="font-headline-lg text-primary text-xl mb-4">কর্মসংস্থান</h3>
+<p class="text-on-surface-variant text-body-md">কারিগরি প্রশিক্ষণ কেন্দ্র স্থাপন এবং স্থানীয় শিল্পের বিকাশে সহায়তা।</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats & Map Bento Grid -->
+<section class="py-section-gap bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Local Monument -->
+<div class="md:col-span-2 md:row-span-2 relative h-[400px] overflow-hidden rounded-xl">
+<img alt="Parbatipur Monument" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uj9FMVBXPV6p2Qj0D0VTf-f8ySPsVlP0B6A7l7PGudrthA8fVAFviCoRjrPfZAlMMuvCidcB4fLY7WuCapdnH6QkNz_nRvoHnGIununP9hxRCFEEBPFsbwHhT8RAa1-Q51d9JwRhjvTeWgBSpkcZ5gMlN4UJwUQxjDVHJe66SO9MguO6t4HT3gOiG9DrtgaVoQGwHykTrs32Rk2p43BIuN1ZH2aW-BHPZTKEvK6SGKZ4oZeetZfFdMA5O5S"/>
+<div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
+<h3 class="text-white font-headline-lg text-2xl">পার্বতীপুরের ঐতিহ্য</h3>
+<p class="text-surface-variant">আমাদের নির্বাচনী এলাকার এক গৌরবময় নিদর্শন।</p>
+</div>
+</div>
+<!-- Quick Stats -->
+<div class="bg-primary p-8 rounded-xl text-on-primary flex flex-col justify-center text-center">
+<span class="font-label-sm uppercase opacity-70">ভোটার সংখ্যা</span>
+<div class="text-4xl font-headline-lg my-2">৪,৫০,০০০+</div>
+<p class="text-sm opacity-90">নিবন্ধিত নাগরিক</p>
+</div>
+<div class="bg-paddy-gold p-8 rounded-xl text-neutral-charcoal flex flex-col justify-center text-center">
+<span class="font-label-sm uppercase opacity-70">ইউনিয়ন পরিষদ</span>
+<div class="text-4xl font-headline-lg my-2">১৭</div>
+<p class="text-sm opacity-90">ফুলবাড়ী ও পার্বতীপুর মিলে</p>
+</div>
+<!-- Map Action -->
+<div class="md:col-span-2 bg-white p-8 rounded-xl border border-outline-variant flex items-center gap-6">
+<div class="h-24 w-24 bg-surface-container rounded-full flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="map">map</span>
+</div>
+<div>
+<h4 class="font-headline-lg text-primary text-xl">নির্বাচনী এলাকা ম্যাপ</h4>
+<p class="text-on-surface-variant mb-4">আমাদের এলাকার সীমানা এবং গুরুত্বপূর্ণ স্থাপনাগুলো দেখুন।</p>
+<button class="text-primary font-bold hover:underline decoration-paddy-gold">ম্যাপ দেখুন →</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Local Issues Triage -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-primary text-3xl mb-4">স্থানীয় সমস্যা ও সমাধান</h2>
+<p class="text-on-surface-variant">আমরা আপনার কথা শুনি। স্থানীয় অবকাঠামো, কৃষি এবং শিক্ষার উন্নয়নই আমাদের প্রধান অগ্রাধিকার।</p>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-lg flex items-center gap-2 hover:opacity-90 transition-all">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+                    আপনার অভিযোগ জমা দিন
+                </button>
+</div>
+<div class="space-y-4">
+<div class="bg-white border-l-4 border-primary p-6 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div class="flex gap-4">
+<span class="bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full font-label-sm h-fit">INFRA</span>
+<div>
+<h4 class="font-bold text-lg mb-1">পৌরসভা সংযোগ সড়ক উন্নয়ন</h4>
+<p class="text-on-surface-variant">ফুলবাড়ী এবং পার্বতীপুর সংযোগকারী প্রধান সড়ক সংস্কার প্রকল্প চলমান।</p>
+</div>
+</div>
+<span class="bg-surface-container text-on-surface-variant px-4 py-1 rounded font-label-sm">অগ্রগতি: ৬৫%</span>
+</div>
+<div class="bg-white border-l-4 border-paddy-gold p-6 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div class="flex gap-4">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded-full font-label-sm h-fit">AGRI</span>
+<div>
+<h4 class="font-bold text-lg mb-1">সেচ সুবিধা সম্প্রসারণ</h4>
+<p class="text-on-surface-variant">শুষ্ক মৌসুমে কৃষকদের পানির সমস্যা দূরীকরণে নতুন পাম্প স্থাপন।</p>
+</div>
+</div>
+<span class="bg-surface-container text-on-surface-variant px-4 py-1 rounded font-label-sm">নির্ধারিত সময়: জানু ২০২৫</span>
+</div>
+<div class="bg-white border-l-4 border-institutional-blue p-6 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div class="flex gap-4">
+<span class="bg-blue-100 text-institutional-blue px-3 py-1 rounded-full font-label-sm h-fit">EDU</span>
+<div>
+<h4 class="font-bold text-lg mb-1">পার্বতীপুর কারিগরি ইনস্টিটিউট</h4>
+<p class="text-on-surface-variant">তরুণদের কর্মসংস্থান সৃষ্টিতে উন্নত প্রশিক্ষণ কেন্দ্র খোলার পরিকল্পনা।</p>
+</div>
+</div>
+<span class="bg-surface-container text-on-surface-variant px-4 py-1 rounded font-label-sm">পরিকল্পাধীন</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-neutral-charcoal border-t-4 border-paddy-gold py-section-gap text-surface-off-white">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-3 gap-gutter items-start">
+<div>
+<h3 class="text-headline-lg font-semibold mb-6">Barrister AKM Kamruzzaman</h3>
+<p class="text-surface-variant mb-4">ন্যায়বিচার ও সেবার প্রতি প্রতিশ্রুতিবদ্ধ। আপনার সেবায় সর্বদা নিয়োজিত।</p>
+<div class="flex gap-4">
+<a class="h-10 w-10 bg-on-surface-variant/20 rounded-full flex items-center justify-center hover:bg-paddy-gold transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="facebook">social_leaderboard</span>
+</a>
+<a class="h-10 w-10 bg-on-surface-variant/20 rounded-full flex items-center justify-center hover:bg-paddy-gold transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-headline-lg text-xl mb-6">লিংকসমূহ</h4>
+<ul class="space-y-4">
+<li><a class="text-surface-variant hover:text-surface-off-white hover:underline decoration-paddy-gold decoration-2 underline-offset-4 transition-all" href="#">হোম</a></li>
+<li><a class="text-surface-variant hover:text-surface-off-white hover:underline decoration-paddy-gold decoration-2 underline-offset-4 transition-all" href="#">আমাদের সম্পর্কে</a></li>
+<li><a class="text-paddy-gold font-bold" href="#">দিনাজপুর-৫</a></li>
+<li><a class="text-surface-variant hover:text-surface-off-white hover:underline decoration-paddy-gold decoration-2 underline-offset-4 transition-all" href="#">মিডিয়া আর্কাইভ</a></li>
+<li><a class="text-surface-variant hover:text-surface-off-white hover:underline decoration-paddy-gold decoration-2 underline-offset-4 transition-all" href="#">আইনি পরামর্শ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-lg text-xl mb-6">অফিস ঠিকানা</h4>
+<p class="text-surface-variant mb-2">ফুলবাড়ী কার্যালয়: স্টেশন রোড, ফুলবাড়ী, দিনাজপুর।</p>
+<p class="text-surface-variant mb-6">পার্বতীপুর কার্যালয়: নতুন বাজার, পার্বতীপুর, দিনাজপুর।</p>
+<div class="bg-on-surface-variant/10 p-4 border border-outline-variant">
+<p class="text-sm">জরুরী সেবার জন্য কল করুন:</p>
+<p class="text-paddy-gold font-bold text-xl">+৮৮০ ১৭০০-০০০০০০</p>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mt-16 pt-8 border-t border-outline-variant/30 text-center text-label-sm">
+            © 2024 Barrister AKM Kamruzzaman. Committed to Justice &amp; Service.
+        </div>
+</footer>
+<!-- Bottom Navigation (Mobile Only) -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-surface border-t border-outline-variant px-6 py-3 flex justify-between items-center z-50">
+<a class="flex flex-col items-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px]">হোম</span>
+</a>
+<a class="flex flex-col items-center text-primary font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="text-[10px]">দিনাজপুর-৫</span>
+</a>
+<a class="flex flex-col items-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+<span class="text-[10px]">সেবা ডেস্ক</span>
+</a>
+<a class="flex flex-col items-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px]">প্রোফাইল</span>
+</a>
+</div>
+</body></html>
