@@ -40,7 +40,6 @@ function submission_errors(string $type): array
     $upazila = clean_post('upazila');
     $subject = clean_post('subject');
     $message = clean_post('message');
-    $category = clean_post('category');
 
     if (!in_array($type, SUBMISSION_TYPES, true)) {
         $errors[] = lang() === 'bn' ? 'সেবার ধরনটি সঠিক নয়।' : 'The request type is invalid.';
@@ -59,9 +58,6 @@ function submission_errors(string $type): array
     }
     if (mb_strlen($subject) < 4 || mb_strlen($subject) > 180) {
         $errors[] = lang() === 'bn' ? 'বিষয় ৪ থেকে ১৮০ অক্ষরের মধ্যে দিন।' : 'Enter a subject between 4 and 180 characters.';
-    }
-    if (mb_strlen($category) < 2 || mb_strlen($category) > 120) {
-        $errors[] = lang() === 'bn' ? 'সেবার ধরন নির্বাচন করুন।' : 'Choose a service category.';
     }
     if (mb_strlen($message) < 20 || mb_strlen($message) > 5000) {
         $errors[] = lang() === 'bn' ? 'বিবরণ ২০ থেকে ৫০০০ অক্ষরের মধ্যে দিন।' : 'Enter details between 20 and 5000 characters.';
@@ -98,8 +94,8 @@ function store_submission(string $type): array
             'nid' => clean_post('nid') ?: null,
             'upazila' => clean_post('upazila'),
             'address' => clean_post('address') ?: null,
-            'subject' => mb_substr('[' . clean_post('category') . '] ' . clean_post('subject'), 0, 180),
-            'message' => "Category: " . clean_post('category') . "\n\n" . clean_post('message'),
+            'subject' => clean_post('subject'),
+            'message' => clean_post('message'),
         ]);
         $submissionId = (int) $pdo->lastInsertId();
         store_upload($pdo, $submissionId);

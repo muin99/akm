@@ -1,88 +1,6 @@
 <?php
 $pageTitle = $pageTitle ?? app_config('site_name');
 $metaDescription = $metaDescription ?? 'Bangla-first public website for Barrister AKM Kamruzzaman.';
-$currentPage = basename($_SERVER['PHP_SELF'] ?? '');
-$currentSlug = (string) ($_GET['slug'] ?? '');
-$navGroups = [
-    [
-        'label' => t('about'),
-        'icon' => 'user-round',
-        'pages' => ['about.php'],
-        'slugs' => ['education', 'experience', 'legal-success', 'social-work', 'political-philosophy', 'vision'],
-        'items' => [
-            ['topic.php?slug=education', lang() === 'bn' ? 'শিক্ষাগত যোগ্যতা' : 'Education'],
-            ['topic.php?slug=experience', lang() === 'bn' ? 'পেশাগত অভিজ্ঞতা' : 'Experience'],
-            ['topic.php?slug=legal-success', lang() === 'bn' ? 'আইনি সাফল্য ও বিশেষায়ন' : 'Legal success'],
-            ['topic.php?slug=social-work', lang() === 'bn' ? 'সামাজিক ও মানবিক কার্যক্রম' : 'Social work'],
-            ['topic.php?slug=political-philosophy', lang() === 'bn' ? 'রাজনৈতিক দর্শন' : 'Political philosophy'],
-            ['topic.php?slug=vision', lang() === 'bn' ? 'ভিশন ও প্রতিশ্রুতি' : 'Vision'],
-        ],
-    ],
-    [
-        'label' => t('services'),
-        'icon' => 'heart-handshake',
-        'pages' => ['services.php', 'complaint.php', 'help.php', 'tracking.php'],
-        'slugs' => ['land-help', 'education-help', 'medical-help', 'confidential-advice'],
-        'items' => [
-            ['complaint.php', lang() === 'bn' ? 'নাগরিক অভিযোগ জমা' : 'Submit complaint'],
-            ['topic.php?slug=land-help', lang() === 'bn' ? 'ভূমি ও আইনি সহায়তা' : 'Land/legal help'],
-            ['topic.php?slug=education-help', lang() === 'bn' ? 'শিক্ষা সহায়তা আবেদন' : 'Education help'],
-            ['topic.php?slug=medical-help', lang() === 'bn' ? 'চিকিৎসা সহায়তা আবেদন' : 'Medical help'],
-            ['topic.php?slug=confidential-advice', lang() === 'bn' ? 'গোপনীয় পরামর্শ ফর্ম' : 'Confidential advice'],
-            ['tracking.php', lang() === 'bn' ? 'অগ্রগতি ট্র্যাকিং' : 'Progress tracking'],
-        ],
-    ],
-    [
-        'label' => t('dinajpur'),
-        'icon' => 'map',
-        'pages' => ['dinajpur.php', 'oversight.php', 'area.php'],
-        'items' => [
-            ['area.php?area=parbatipur', lang() === 'bn' ? 'পার্বতীপুর' : 'Parbatipur'],
-            ['area.php?area=fulbari', lang() === 'bn' ? 'ফুলবাড়ী' : 'Phulbari'],
-            ['dinajpur.php#tracks', lang() === 'bn' ? 'উন্নয়ন পর্যবেক্ষণ' : 'Development tracks'],
-            ['oversight.php', t('oversight')],
-            ['complaint.php?service=development', lang() === 'bn' ? 'উন্নয়ন প্রস্তাব জমা' : 'Submit proposal'],
-        ],
-    ],
-    [
-        'label' => lang() === 'bn' ? 'নীতি ও আইন' : 'Policy & Law',
-        'icon' => 'scale',
-        'pages' => ['reform.php', 'legal-advice.php', 'faq.php'],
-        'slugs' => ['political-philosophy', 'citizen-rights', 'land-law', 'family-law', 'criminal-law'],
-        'items' => [
-            ['reform.php', lang() === 'bn' ? 'তারেক রহমানের ৩১ দফা' : 'Tarique Rahman’s 31 points'],
-            ['topic.php?slug=citizen-rights', lang() === 'bn' ? 'নাগরিক অধিকার' : 'Citizen rights'],
-            ['topic.php?slug=land-law', lang() === 'bn' ? 'জমি/ভূমি সংক্রান্ত' : 'Land issues'],
-            ['topic.php?slug=family-law', lang() === 'bn' ? 'পারিবারিক আইন' : 'Family law'],
-            ['topic.php?slug=criminal-law', lang() === 'bn' ? 'ফৌজদারি আইন' : 'Criminal law'],
-            ['faq.php', lang() === 'bn' ? 'প্রশ্নোত্তর পর্ব' : 'Q&A'],
-        ],
-    ],
-    [
-        'label' => lang() === 'bn' ? 'মিডিয়া ও সংলাপ' : 'Media & Dialogue',
-        'icon' => 'radio',
-        'pages' => ['media.php', 'dialogue.php'],
-        'slugs' => ['press-release', 'tv-interviews', 'columns-articles', 'video-gallery'],
-        'items' => [
-            ['topic.php?slug=press-release', lang() === 'bn' ? 'সংবাদ বিজ্ঞপ্তি' : 'Press releases'],
-            ['topic.php?slug=tv-interviews', lang() === 'bn' ? 'টিভি সাক্ষাৎকার' : 'TV interviews'],
-            ['topic.php?slug=columns-articles', lang() === 'bn' ? 'কলাম ও প্রবন্ধ' : 'Columns/articles'],
-            ['topic.php?slug=video-gallery', lang() === 'bn' ? 'ভিডিও গ্যালারি' : 'Video gallery'],
-            ['dialogue.php', t('dialogue')],
-        ],
-    ],
-    [
-        'label' => lang() === 'bn' ? 'প্ল্যাটফর্ম' : 'Platforms',
-        'icon' => 'users-round',
-        'pages' => ['youth.php', 'social-support.php', 'survey.php', 'contact.php'],
-        'items' => [
-            ['youth.php', t('youth')],
-            ['social-support.php', t('social_support')],
-            ['survey.php', t('survey')],
-            ['contact.php', t('contact')],
-        ],
-    ],
-];
 ?>
 <!doctype html>
 <html lang="<?= h(lang()) ?>">
@@ -140,19 +58,12 @@ $navGroups = [
     </button>
     <nav class="site-nav" id="site-menu" data-menu>
         <a class="<?= active_page('index.php') ?>" href="<?= h(page_url(($pathPrefix ?? '') . 'index.php')) ?>"><?= h(t('home')) ?></a>
-        <?php foreach ($navGroups as $group): $active = in_array($currentPage, $group['pages'], true) || ($currentPage === 'topic.php' && in_array($currentSlug, $group['slugs'] ?? [], true)); ?>
-            <div class="nav-item <?= $active ? 'is-active' : '' ?>">
-                <button class="nav-trigger" type="button" data-submenu-toggle aria-expanded="false">
-                    <i data-lucide="<?= h($group['icon']) ?>" aria-hidden="true"></i><?= h($group['label']) ?>
-                    <i data-lucide="chevron-down" aria-hidden="true"></i>
-                </button>
-                <div class="submenu">
-                    <?php foreach ($group['items'] as [$url, $label]): ?>
-                        <a href="<?= h(page_url(($pathPrefix ?? '') . $url)) ?>"><?= h($label) ?></a>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-        <?php endforeach; ?>
+        <a class="<?= active_page('about.php') ?>" href="<?= h(page_url(($pathPrefix ?? '') . 'about.php')) ?>"><?= h(t('about')) ?></a>
+        <a class="<?= active_page('dinajpur.php') ?>" href="<?= h(page_url(($pathPrefix ?? '') . 'dinajpur.php')) ?>"><?= h(t('dinajpur')) ?></a>
+        <a class="<?= active_page('reform.php') ?>" href="<?= h(page_url(($pathPrefix ?? '') . 'reform.php')) ?>"><?= h(t('reform')) ?></a>
+        <a class="<?= active_page('media.php') ?>" href="<?= h(page_url(($pathPrefix ?? '') . 'media.php')) ?>"><?= h(t('media')) ?></a>
+        <a class="<?= active_page('legal-advice.php') ?>" href="<?= h(page_url(($pathPrefix ?? '') . 'legal-advice.php')) ?>"><?= h(t('legal_advice')) ?></a>
+        <a class="service-link <?= active_page('services.php') ?>" href="<?= h(page_url(($pathPrefix ?? '') . 'services.php')) ?>"><i data-lucide="heart-handshake" aria-hidden="true"></i><?= h(t('services')) ?></a>
         <a class="lang-link" data-lang href="<?= h(language_url(lang() === 'bn' ? 'en' : 'bn')) ?>"><i data-lucide="globe-2" aria-hidden="true"></i><?= h(t('language')) ?></a>
     </nav>
 </header>

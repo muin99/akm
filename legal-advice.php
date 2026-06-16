@@ -17,7 +17,7 @@ require __DIR__ . '/includes/header.php';
 ?>
 <main id="main">
     <?php require __DIR__ . '/includes/page-hero.php'; ?>
-    <section class="section pt-0" id="rights"><div class="page-shell split inner-feature">
+    <section class="section pt-0"><div class="page-shell split inner-feature">
         <div class="copy feature-panel" data-reveal>
             <span class="eyebrow"><?= lang() === 'bn' ? 'নাগরিক অধিকার' : 'Citizen rights' ?></span>
             <h2><?= lang() === 'bn' ? 'আইনের চোখে সকল মানুষ সমান' : 'Everyone is equal before the law' ?></h2>
@@ -30,8 +30,8 @@ require __DIR__ . '/includes/header.php';
     <section class="section paper-band"><div class="page-shell">
         <div class="section-head"><h2><?= lang() === 'bn' ? 'আইনি সহায়তার ক্ষেত্র' : 'Legal guidance areas' ?></h2><p><?= lang() === 'bn' ? 'ডেমো সাইটের আইনি পরামর্শ বিভাগগুলোকে পরিষ্কার ও ব্যবহারযোগ্যভাবে সাজানো হয়েছে।' : 'Legal-advice categories from the demo are arranged into a cleaner usable structure.' ?></p></div>
         <div class="grid-4">
-            <?php foreach (collection('legal_topics')[lang()] as $index => $topic): $ids = ['citizen-rights', 'land', 'family', 'criminal']; ?>
-                <article class="premium-card" id="<?= h($ids[$index] ?? 'legal-topic-' . $index) ?>" data-reveal><span><?= h(t('legal_advice')) ?></span><h3><?= h($topic['title']) ?></h3><p><?= h($topic['text']) ?></p></article>
+            <?php foreach (collection('legal_topics')[lang()] as $topic): ?>
+                <article class="premium-card" data-reveal><span><?= h(t('legal_advice')) ?></span><h3><?= h($topic['title']) ?></h3><p><?= h($topic['text']) ?></p></article>
             <?php endforeach; ?>
         </div>
     </div></section>

@@ -18,7 +18,6 @@
             <h3><?= lang() === 'bn' ? 'প্রধান পেজ' : 'Main pages' ?></h3>
             <a href="<?= h(page_url(($pathPrefix ?? '') . 'about.php')) ?>"><?= h(t('about')) ?></a>
             <a href="<?= h(page_url(($pathPrefix ?? '') . 'dinajpur.php')) ?>"><?= h(t('dinajpur')) ?></a>
-            <a href="<?= h(page_url(($pathPrefix ?? '') . 'oversight.php')) ?>"><?= h(t('oversight')) ?></a>
             <a href="<?= h(page_url(($pathPrefix ?? '') . 'reform.php')) ?>"><?= h(t('reform')) ?></a>
             <a href="<?= h(page_url(($pathPrefix ?? '') . 'media.php')) ?>"><?= h(t('media')) ?></a>
         </div>
@@ -32,11 +31,6 @@
         <div class="footer-column footer-contact">
             <h3><?= lang() === 'bn' ? 'রিসোর্স' : 'Resources' ?></h3>
             <a href="<?= h(page_url(($pathPrefix ?? '') . 'legal-advice.php')) ?>"><?= h(t('legal_advice')) ?></a>
-            <a href="<?= h(page_url(($pathPrefix ?? '') . 'dialogue.php')) ?>"><?= h(t('dialogue')) ?></a>
-            <a href="<?= h(page_url(($pathPrefix ?? '') . 'youth.php')) ?>"><?= h(t('youth')) ?></a>
-            <a href="<?= h(page_url(($pathPrefix ?? '') . 'social-support.php')) ?>"><?= h(t('social_support')) ?></a>
-            <a href="<?= h(page_url(($pathPrefix ?? '') . 'survey.php')) ?>"><?= h(t('survey')) ?></a>
-            <a href="<?= h(page_url(($pathPrefix ?? '') . 'contact.php')) ?>"><?= h(t('contact')) ?></a>
             <a href="<?= h(page_url(($pathPrefix ?? '') . 'faq.php')) ?>"><?= h(t('faq')) ?></a>
             <a href="<?= h(page_url(($pathPrefix ?? '') . 'services.php')) ?>"><?= h(t('services')) ?></a>
             <a href="<?= h(page_url(($pathPrefix ?? '') . 'admin/index.php')) ?>"><?= h(t('admin')) ?></a>

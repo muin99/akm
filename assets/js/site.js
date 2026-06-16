@@ -10,15 +10,6 @@ if (menuButton && menu) {
   });
 }
 
-document.querySelectorAll("[data-submenu-toggle]").forEach((button) => {
-  button.addEventListener("click", () => {
-    const item = button.closest(".nav-item");
-    if (!item) return;
-    const opened = item.classList.toggle("is-open");
-    button.setAttribute("aria-expanded", opened ? "true" : "false");
-  });
-});
-
 if (languageLink) {
   languageLink.addEventListener("click", () => {
     const url = new URL(languageLink.href);

@@ -18,8 +18,8 @@ require __DIR__ . '/includes/header.php';
 <main id="main">
     <?php require __DIR__ . '/includes/page-hero.php'; ?>
     <section class="section pt-0 constituency-overview"><div class="page-shell twin-stories">
-        <article class="place-story" id="fulbari" data-reveal><img src="assets/images/constituency-fulbari.jpg" alt="Phulbari"><div><span class="eyebrow">Phulbari</span><h2><?= lang() === 'bn' ? 'ফুলবাড়ীর অগ্রাধিকার' : 'Phulbari focus' ?></h2><p><?= lang() === 'bn' ? 'নাগরিক নিরাপত্তা, বাসযোগ্য পৌর পরিবেশ, স্থানীয় অর্থনীতি ও শিল্পসম্পর্কিত জনস্বার্থ।' : 'Public safety, livable town planning, local economy, and industry-linked public interest.' ?></p></div></article>
-        <article class="place-story" id="parbatipur" data-reveal><img src="assets/images/constituency-parbatipur.jpg" alt="Parbatipur"><div><span class="eyebrow">Parbatipur</span><h2><?= lang() === 'bn' ? 'পার্বতীপুরের অগ্রাধিকার' : 'Parbatipur focus' ?></h2><p><?= lang() === 'bn' ? 'রেল জংশন, লোকোমোটিভ সক্ষমতা, কর্মসংস্থান ও পরিচ্ছন্ন পরিকল্পিত শহর ভাবনা।' : 'Rail junction capacity, locomotive infrastructure, employment, and a cleaner planned town.' ?></p></div></article>
+        <article class="place-story" data-reveal><img src="assets/images/constituency-fulbari.jpg" alt="Phulbari"><div><span class="eyebrow">Phulbari</span><h2><?= lang() === 'bn' ? 'ফুলবাড়ীর অগ্রাধিকার' : 'Phulbari focus' ?></h2><p><?= lang() === 'bn' ? 'নাগরিক নিরাপত্তা, বাসযোগ্য পৌর পরিবেশ, স্থানীয় অর্থনীতি ও শিল্পসম্পর্কিত জনস্বার্থ।' : 'Public safety, livable town planning, local economy, and industry-linked public interest.' ?></p></div></article>
+        <article class="place-story" data-reveal><img src="assets/images/constituency-parbatipur.jpg" alt="Parbatipur"><div><span class="eyebrow">Parbatipur</span><h2><?= lang() === 'bn' ? 'পার্বতীপুরের অগ্রাধিকার' : 'Parbatipur focus' ?></h2><p><?= lang() === 'bn' ? 'রেল জংশন, লোকোমোটিভ সক্ষমতা, কর্মসংস্থান ও পরিচ্ছন্ন পরিকল্পিত শহর ভাবনা।' : 'Rail junction capacity, locomotive infrastructure, employment, and a cleaner planned town.' ?></p></div></article>
     </div></section>
     <section class="section paper-band"><div class="page-shell">
         <div class="section-head"><h2><?= lang() === 'bn' ? 'আসনের দ্রুত তথ্য' : 'Constituency at a glance' ?></h2><p><?= lang() === 'bn' ? 'প্রকাশ্য নির্বাচনী প্রতিবেদনে পাওয়া স্থানীয় কাঠামো ও ভোটার তথ্য।' : 'Local structure and voter information from public election reporting.' ?></p></div>
@@ -29,7 +29,7 @@ require __DIR__ . '/includes/header.php';
             <?php endforeach; ?>
         </div>
     </div></section>
-    <section class="section" id="tracks"><div class="page-shell">
+    <section class="section"><div class="page-shell">
         <div class="section-head"><h2><?= lang() === 'bn' ? 'ইউনিয়নভিত্তিক উন্নয়ন মানচিত্র' : 'Union-level development map' ?></h2><p><?= lang() === 'bn' ? 'ডেমো সাইটের কাঠামো ধরে ফুলবাড়ী ও পার্বতীপুরের ইউনিয়নগুলোকে উন্নয়ন তদারকি, সফর, প্রস্তাব ও সমাধানকৃত কাজের জন্য সাজানো হয়েছে।' : 'Using the demo structure, the unions of Phulbari and Parbatipur are organized for monitoring, field visits, proposals, and solved issues.' ?></p></div>
         <div class="grid-2">
             <?php foreach (collection('development_areas')[lang()] as $area => $units): ?>

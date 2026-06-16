@@ -17,7 +17,7 @@ require __DIR__ . '/includes/header.php';
 ?>
 <main id="main">
     <?php require __DIR__ . '/includes/page-hero.php'; ?>
-    <section class="section pt-0" id="press-release"><div class="page-shell newsroom-lead">
+    <section class="section pt-0"><div class="page-shell newsroom-lead">
         <?php $leadItem = collection('news')[0]; $leadNews = $leadItem[lang()]; ?>
         <article class="press-lead" data-reveal>
             <img src="<?= h($leadItem['image']) ?>" alt="">
@@ -45,7 +45,7 @@ require __DIR__ . '/includes/header.php';
     <section class="section section-dark"><div class="page-shell"><div class="section-head"><h2><?= lang() === 'bn' ? 'মিডিয়া লাইব্রেরি আরও বড় হবে' : 'The media library is built to grow' ?></h2><p><?= lang() === 'bn' ? 'টিভি সাক্ষাৎকার, বক্তব্য, গণসংযোগ, কলাম ও লাইভ সেশনকে আলাদা করে সাজানোর জন্য কাঠামো প্রস্তুত।' : 'The structure is ready for TV interviews, speeches, outreach, columns, and live sessions.' ?></p></div><div class="grid-3">
         <?php foreach ((lang() === 'bn' ? ['টিভি সাক্ষাৎকার', 'প্রেস কনফারেন্স ও কলাম', 'ভিডিও, লাইভ ও গ্যালারি'] : ['TV interviews', 'Press and columns', 'Video, live, and gallery']) as $i => $category): ?><article class="priority agenda-card dark-panel"><span><?= sprintf('%02d', $i + 1) ?></span><b><?= h($category) ?></b><p><?= lang() === 'bn' ? 'প্রতিটি আইটেমে তারিখ, উৎস ও প্রেক্ষাপটসহ প্রকাশের জায়গা রাখা হয়েছে।' : 'Each item has room for date, source, and context.' ?></p></article><?php endforeach; ?>
     </div></div></section>
-    <section class="section" id="tv"><div class="page-shell split">
+    <section class="section"><div class="page-shell split">
         <div class="copy feature-panel" data-reveal>
             <span class="eyebrow"><?= lang() === 'bn' ? 'টিভি সাক্ষাৎকার' : 'TV interviews' ?></span>
             <h2><?= lang() === 'bn' ? 'বক্তব্য, অবস্থান ও গণসংযোগের মিডিয়া আর্কাইভ' : 'A media archive of speeches, positions, and outreach' ?></h2>
@@ -68,7 +68,7 @@ require __DIR__ . '/includes/header.php';
             <?php endforeach; ?>
         </div>
     </div></section>
-    <section class="section" id="columns"><div class="page-shell">
+    <section class="section"><div class="page-shell">
         <div class="section-head"><h2><?= lang() === 'bn' ? 'কলাম ও প্রবন্ধ' : 'Columns and articles' ?></h2><p><?= lang() === 'bn' ? 'গল্প, সংস্কৃতি, স্মৃতি ও মানবিক বোধকে রাজনৈতিক ওয়েবসাইটের গভীরতর পাঠ্যভাগ হিসেবে রাখা হয়েছে।' : 'Stories, culture, memory, and human sensibility are kept as a deeper reading layer of the site.' ?></p></div>
         <div class="grid-2">
             <?php foreach (collection('article_items')[lang()] as $article): ?>
@@ -76,7 +76,7 @@ require __DIR__ . '/includes/header.php';
             <?php endforeach; ?>
         </div>
     </div></section>
-    <section class="section section-dark" id="press"><div class="page-shell">
+    <section class="section section-dark"><div class="page-shell">
         <div class="section-head"><h2><?= lang() === 'bn' ? 'প্রেস কনফারেন্স আপডেট' : 'Press conference updates' ?></h2><p><?= lang() === 'bn' ? 'আইন অঙ্গনের অভিজ্ঞতা ও রাজনৈতিক পরিমণ্ডলে সক্রিয় উপস্থিতি নিয়ে আলোচিত আপডেট।' : 'Updates around legal experience and active political presence.' ?></p></div>
         <div class="press-grid">
             <?php foreach (collection('press_items')[lang()] as $item): ?>
@@ -87,7 +87,7 @@ require __DIR__ . '/includes/header.php';
             <?php endforeach; ?>
         </div>
     </div></section>
-    <section class="section" id="video"><div class="page-shell">
+    <section class="section"><div class="page-shell">
         <div class="section-head"><h2><?= lang() === 'bn' ? 'ভিডিও গ্যালারি' : 'Video gallery' ?></h2><p><?= lang() === 'bn' ? 'গণসংযোগ, সমস্যা সমাধান এবং আইন-রাজনীতি বিষয়ক ভিডিও আইটেমের জায়গা।' : 'A place for outreach, problem-solving, law, and politics video items.' ?></p></div>
         <div class="grid-3">
             <?php foreach (collection('video_gallery')[lang()] as $index => $item): ?>

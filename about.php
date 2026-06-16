@@ -27,7 +27,7 @@ require __DIR__ . '/includes/header.php';
             <a class="text-link" href="https://www.bssnews.net/interview/354832"<?= external_attrs() ?>><?= lang() === 'bn' ? 'বাসস সাক্ষাৎকার দেখুন' : 'Read BSS interview' ?></a>
         </div>
     </div></section>
-    <section class="section" id="education"><div class="page-shell">
+    <section class="section"><div class="page-shell">
         <div class="section-head"><h2><?= lang() === 'bn' ? 'শিক্ষাগত যোগ্যতা' : 'Educational qualifications' ?></h2><p><?= lang() === 'bn' ? 'আইন পেশা, জনসেবা ও নেতৃত্বের প্রস্তুতিকে একটি সুসংগঠিত শিক্ষাগত ভিত্তি শক্তিশালী করেছে।' : 'A structured educational base supports his path in law, public service, and leadership.' ?></p></div>
         <div class="credential-grid">
             <?php foreach (collection('education_items')[lang()] as $index => $item): ?>
@@ -52,7 +52,7 @@ require __DIR__ . '/includes/header.php';
         <article><time>2026-01-26</time><h3><?= lang() === 'bn' ? 'জীবনমান, নিরাপত্তা ও কর্মসংস্থান নিয়ে সাক্ষাৎকার' : 'Interview on living standards, safety, and jobs' ?></h3><p><?= lang() === 'bn' ? 'স্থানীয় উন্নয়ন, রেলওয়ে সক্ষমতা এবং শহর পরিকল্পনা নিয়ে তার বক্তব্য প্রকাশিত হয়।' : 'His remarks on local development, railway capacity, and town planning were published.' ?></p></article>
         <article><time>2026-02-03</time><h3><?= lang() === 'bn' ? 'ফুলবাড়ী-পার্বতীপুরে গণসংযোগ' : 'Outreach across Phulbari-Parbatipur' ?></h3><p><?= lang() === 'bn' ? 'মাঠপর্যায়ের গণসংযোগ ও ভোটারদের সঙ্গে সরাসরি কথোপকথন সংবাদে উঠে আসে।' : 'Field outreach and direct voter conversations were covered in the press.' ?></p></article>
     </div></div></section>
-    <section class="section section-dark" id="experience"><div class="page-shell">
+    <section class="section section-dark"><div class="page-shell">
         <div class="section-head"><h2><?= lang() === 'bn' ? 'পেশাগত অভিজ্ঞতা' : 'Professional experience' ?></h2><p><?= lang() === 'bn' ? 'আদালত, গবেষণা, নথি, ক্লায়েন্ট যোগাযোগ এবং উচ্চ আদালতের আবেদনের অভিজ্ঞতা একত্রে একটি পরিণত আইনি প্রোফাইল তৈরি করে।' : 'Court work, research, documentation, client communication, and High Court applications together shape a mature legal profile.' ?></p></div>
         <div class="timeline elegant-timeline dark-timeline experience-timeline">
             <?php foreach (collection('profile_timeline')[lang()] as $item): ?>
@@ -60,7 +60,7 @@ require __DIR__ . '/includes/header.php';
             <?php endforeach; ?>
         </div>
     </div></section>
-    <section class="section" id="legal-success"><div class="page-shell">
+    <section class="section"><div class="page-shell">
         <div class="section-head"><h2><?= lang() === 'bn' ? 'আইনি সাফল্য ও বিশেষায়ন' : 'Legal success and specialization' ?></h2><p><?= lang() === 'bn' ? 'সংবিধান, মানবাধিকার, জনস্বার্থ ও আইনের শাসনকে কেন্দ্র করে তার আইনি কাজের পরিসর তুলে ধরা হয়েছে।' : 'His legal work is framed around constitution, human rights, public interest, and rule of law.' ?></p></div>
         <div class="grid-3">
             <?php foreach (collection('legal_highlights')[lang()] as $item): ?>
@@ -68,7 +68,7 @@ require __DIR__ . '/includes/header.php';
             <?php endforeach; ?>
         </div>
     </div></section>
-    <section class="section paper-band" id="social-work"><div class="page-shell">
+    <section class="section paper-band"><div class="page-shell">
         <div class="section-head"><h2><?= lang() === 'bn' ? 'সামাজিক ও মানবিক কাজের অগ্রাধিকার' : 'Social and humanitarian priorities' ?></h2><p><?= lang() === 'bn' ? 'রাজনীতি শুধু বক্তব্য নয়; মানুষের পাশে দাঁড়ানো, শিক্ষা-স্বাস্থ্য সহায়তা এবং সমাজের দুর্বল মানুষের জন্য কাজ করার প্রতিশ্রুতি।' : 'Politics is not only speech; it is also support, education, healthcare, and standing beside vulnerable people.' ?></p></div>
         <div class="grid-3">
             <?php foreach (collection('social_work')[lang()] as $item): ?>
@@ -76,7 +76,7 @@ require __DIR__ . '/includes/header.php';
             <?php endforeach; ?>
         </div>
     </div></section>
-    <section class="section section-dark" id="vision"><div class="page-shell">
+    <section class="section section-dark"><div class="page-shell">
         <div class="section-head"><h2><?= lang() === 'bn' ? 'ব্যক্তিগত ভিশন ও প্রতিশ্রুতি' : 'Personal vision and commitment' ?></h2><p><?= lang() === 'bn' ? 'ন্যায়সঙ্গত সমাজ, কর্মসংস্থান, উন্নয়ন, আইনের সমতা এবং শান্ত-সম্প্রীতিময় ফুলবাড়ী-পার্বতীপুর গড়ার আহ্বান।' : 'A call for justice, employment, development, equality before law, and peaceful Phulbari-Parbatipur.' ?></p></div>
         <div class="vision-layout">
             <?php foreach (collection('personal_commitments')[lang()] as $index => $item): ?>

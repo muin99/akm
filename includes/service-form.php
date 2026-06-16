@@ -2,22 +2,6 @@
 $type = $type ?? 'complaint';
 $labels = service_labels($type);
 $formNotice = flash('form_error');
-$categoryOptions = collection('intake_categories')[$type][lang()] ?? [];
-$requestedCategory = trim((string) ($_GET['service'] ?? ''));
-$serviceDefaults = [
-    'land' => lang() === 'bn' ? 'ভূমি ও আইনি সহায়তা' : 'Land and legal assistance',
-    'education' => lang() === 'bn' ? 'শিক্ষা সহায়তা আবেদন' : 'Education assistance application',
-    'medical' => lang() === 'bn' ? 'চিকিৎসা সহায়তা আবেদন' : 'Medical assistance application',
-    'confidential' => lang() === 'bn' ? 'গোপনীয় পরামর্শ ফর্ম' : 'Confidential advice',
-    'development' => lang() === 'bn' ? 'উন্নয়ন প্রস্তাব জমা' : 'Development proposal',
-    'survey' => lang() === 'bn' ? 'নাগরিক মতামত জরিপ' : 'Citizen opinion survey',
-    'live' => lang() === 'bn' ? 'লাইভ সেশনের প্রশ্ন' : 'Live session question',
-    'message' => lang() === 'bn' ? 'সরাসরি মেসেজ' : 'Direct message',
-    'volunteer' => lang() === 'bn' ? 'স্বেচ্ছাসেবক কার্যক্রম' : 'Volunteer activity',
-    'scholarship' => lang() === 'bn' ? 'শিক্ষাবৃত্তি' : 'Scholarship',
-    'maternity' => lang() === 'bn' ? 'প্রসূতি মায়ের সহায়তা' : 'Maternity support',
-];
-$selectedCategory = $serviceDefaults[$requestedCategory] ?? ($categoryOptions[0] ?? '');
 $intakeIntro = [
     'complaint' => lang() === 'bn' ? 'স্থানীয় সমস্যা, অভিযোগ বা সেবা ঘাটতির তথ্য পাঠান। জমা দেওয়ার পর পাওয়া কোড দিয়ে অগ্রগতি দেখুন।' : 'Send local problems, complaints, or service gaps. Use the returned code to follow progress.',
     'help' => lang() === 'bn' ? 'সহায়তার প্রয়োজন সম্মানের সঙ্গে জানান। প্রেক্ষাপট পরিষ্কার হলে সেবা ডেস্ক দ্রুত বুঝতে পারবে।' : 'Share assistance needs with dignity. Clear context helps the service desk understand the request.',
@@ -50,17 +34,6 @@ $intakeIntro = [
                 <div class="form-grid">
                     <div class="field"><label for="name"><?= lang() === 'bn' ? 'পূর্ণ নাম' : 'Full name' ?></label><input id="name" name="name" required maxlength="140" autocomplete="name"></div>
                     <div class="field"><label for="phone"><?= lang() === 'bn' ? 'ফোন' : 'Phone' ?></label><input id="phone" name="phone" required maxlength="24" inputmode="tel" autocomplete="tel"></div>
-                    <div class="field">
-                        <label for="category"><?= lang() === 'bn' ? 'সেবার ধরন' : 'Service category' ?></label>
-                        <select id="category" name="category" required>
-                            <?php foreach ($categoryOptions as $option): ?>
-                                <option value="<?= h($option) ?>" <?= $selectedCategory === $option ? 'selected' : '' ?>><?= h($option) ?></option>
-                            <?php endforeach; ?>
-                            <?php if ($selectedCategory && !in_array($selectedCategory, $categoryOptions, true)): ?>
-                                <option value="<?= h($selectedCategory) ?>" selected><?= h($selectedCategory) ?></option>
-                            <?php endif; ?>
-                        </select>
-                    </div>
                     <div class="field"><label for="email"><?= lang() === 'bn' ? 'ইমেইল (ঐচ্ছিক)' : 'Email (optional)' ?></label><input id="email" name="email" type="email" maxlength="190" autocomplete="email"></div>
                     <div class="field"><label for="nid"><?= lang() === 'bn' ? 'এনআইডি (ঐচ্ছিক)' : 'NID (optional)' ?></label><input id="nid" name="nid" maxlength="40" autocomplete="off"></div>
                     <div class="field">

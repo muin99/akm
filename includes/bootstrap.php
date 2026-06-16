@@ -61,13 +61,8 @@ function language_url(string $target): string
 
 function page_url(string $path): string
 {
-    $fragment = '';
-    if (str_contains($path, '#')) {
-        [$path, $fragment] = explode('#', $path, 2);
-        $fragment = '#' . $fragment;
-    }
     $separator = str_contains($path, '?') ? '&' : '?';
-    return $path . $separator . 'lang=' . rawurlencode(lang()) . $fragment;
+    return $path . $separator . 'lang=' . rawurlencode(lang());
 }
 
 function csrf_token(): string
